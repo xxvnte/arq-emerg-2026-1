@@ -1,0 +1,579 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{1.0 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+
+% Colores para tablas
+\definecolor{headerblue}{RGB}{31,73,125}
+\definecolor{rowgray}{RGB}{242,242,242}
+\newcommand{\ph}[1]{[#1]}
+%%%%%%%%%%%%%%%%%%%%%
+
+\title{Taller Final}
+\date{22 de mayo de 2026}
+\makeatletter
+\let\thetitle\@title
+\let\thedate\@date
+\makeatother
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Arquitecturas Emergentes -- Fase A}
+\lhead{EIT -- UDP}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  PORTADA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+    \centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale=0.5]{img/unnamed.png}\\[1.0 cm]
+    \textsc{\LARGE Universidad Diego Portales}\\[0.2 cm]
+    \textsc{\large ESCUELA DE INFORMÁTICA \& TELECOMUNICACIONES}\\[1.5 cm]
+    \textsc{\LARGE Arquitecturas Emergentes}\\[1.0 cm]
+
+    \rule{\linewidth}{0.2 mm}\\[0.4 cm]
+    {\huge \bfseries \thetitle}\\[0.4 cm]
+    {\Large \textit{Fase A: Informe de Avance}}\\[0.4 cm]
+    \rule{\linewidth}{0.2 mm}\\[1.5 cm]
+
+    \begin{minipage}{1.0\textwidth}
+        \begin{center} \large
+            \emph{Profesores:}\\[0.2cm]
+            Carlos García\\[0.1cm]
+            Jorge Elliott\\[0.8cm]
+            \emph{Autores:}\\[0.2cm]
+            Diego Muñoz\\[0.1cm]
+            Ignacio Pastén\\[0.1cm]
+            Vicente Leiva
+        \end{center}
+    \end{minipage}
+
+    \vfill
+    {\large \thedate}\\[2 cm]
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              INTRODUCCIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+
+El presente informe corresponde a la \textbf{Fase A} del Taller Final de la asignatura 
+\textit{Arquitecturas Emergentes}, cuyo objetivo es levantar información estratégica, 
+operacional y normativa de una empresa real, como base para la posterior justificación 
+y propuesta de una arquitectura tecnológica alineada con su negocio (Fase B).
+
+La metodología de trabajo consistió en entrevistas directas con representantes de la empresa 
+seleccionada, complementadas con investigación propia del equipo. Este documento estructura 
+los hallazgos en cuatro partes: identificación de la empresa y sus contrapartes (Parte I), 
+aspectos estratégicos del negocio (Parte II), recursos y operación actual (Parte III) y 
+requerimientos externos (Parte IV).
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PARTE I: CONTACTO CON LA EMPRESA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parte I: Contacto con la Empresa e Identificación de las Contrapartes}
+
+\subsection{Caracterización de la Empresa}
+
+% ----------------------------------------------------------------
+%  COMPLETAR: Razón social, rubro, marcas, forma legal, antigüedad,
+%  propiedad/dependencia, tamaño (personal, ventas, locales, etc.)
+% ----------------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X}
+\toprule
+\rowcolor{headerblue}\multicolumn{2}{c}{\textcolor{white}{\textbf{Ficha de Identificación de la Empresa}}} \\
+\midrule
+Razón Social        & \ph{Completar} \\
+\rowcolor{rowgray}
+Rubro / Industria   & \ph{Completar} \\
+Marcas              & \ph{Completar} \\
+\rowcolor{rowgray}
+Forma Legal         & \ph{Completar} \\
+Antigüedad          & \ph{Completar} \\
+\rowcolor{rowgray}
+Propiedad / Dependencia & \ph{Completar} \\
+N.º de Empleados    & \ph{Completar} \\
+\rowcolor{rowgray}
+Ventas Anuales (aprox.) & \ph{Completar} \\
+N.º de Locales / Sucursales & \ph{Completar} \\
+\rowcolor{rowgray}
+Presencia Geográfica & \ph{Completar} \\
+\bottomrule
+\end{tabularx}
+\caption{Identificación general de la empresa analizada.}
+\end{table}
+
+\subsection{Contrapartes Entrevistadas}
+
+% ----------------------------------------------------------------
+%  COMPLETAR: Nombre, cargo, profesión y área de cada entrevistado
+% ----------------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{3cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{3.5cm} >{\centering\arraybackslash}X}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Nombre}} & 
+\textcolor{white}{\textbf{Cargo}} & 
+\textcolor{white}{\textbf{Profesión}} & 
+\textcolor{white}{\textbf{Área}} \\
+\midrule
+\ph{Nombre 1} & \ph{Cargo} & \ph{Profesión} & \ph{Área} \\
+\rowcolor{rowgray}
+\ph{Nombre 2} & \ph{Cargo} & \ph{Profesión} & \ph{Área} \\
+\bottomrule
+\end{tabularx}
+\caption{Contrapartes de la empresa contactadas para el desarrollo de este informe.}
+\end{table}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PARTE II: ASPECTOS ESTRATÉGICOS DEL NEGOCIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parte II: Aspectos Estratégicos del Negocio}
+
+%-------------------------------------------------
+\subsection{Estrategia Corporativa y de Negocio}
+%-------------------------------------------------
+
+\subsubsection*{P1. Misión, visión y objetivos estratégicos}
+% ----------------------------------------------------------------
+%  COMPLETAR (~media página, Arial 10 equivalente en LaTeX)
+% ----------------------------------------------------------------
+[Describir la misión, visión y objetivos estratégicos declarados por la empresa, tal como fueron 
+comunicados en la entrevista o publicados oficialmente.]
+
+\subsubsection*{P2. Productos o servicios críticos para el negocio}
+[Identificar cuáles son los productos o servicios de mayor relevancia estratégica y/o ingresos 
+para la organización.]
+
+\subsubsection*{P3. Principales procesos de negocio que sostienen la operación}
+[Describir los procesos centrales (core) que permiten la entrega de valor al cliente y el 
+funcionamiento continuo del negocio.]
+
+\subsubsection*{P4. Modelo operativo actual y evolución esperada}
+[Explicar cómo opera actualmente la empresa y cuál es la visión de cómo evolucionará 
+su modelo operativo en el mediano plazo.]
+
+\subsubsection*{P5. Proyección de crecimiento en los próximos 3--5 años}
+[Indicar estimaciones de crecimiento en clientes, mercados, transacciones o unidades 
+de negocio.]
+
+\subsubsection*{P6. Principales riesgos del negocio con impacto en infraestructura tecnológica}
+[Detallar los riesgos identificados por la empresa que puedan afectar directamente la 
+continuidad o desempeño de su infraestructura TI.]
+
+\subsubsection*{P7. Estrategia a largo plazo: expansión geográfica y nuevos productos/mercados}
+[Describir planes de expansión, internacionalización, nuevas líneas de negocio o diversificación 
+de servicios.]
+
+%-------------------------------------------------
+\subsection{Proyecciones de Procesamiento y Escalabilidad}
+%-------------------------------------------------
+
+\subsubsection*{P8. Cargas actuales de procesamiento}
+[Indicar volúmenes de transacciones, datos procesados y usuarios activos actualmente.]
+
+\subsubsection*{P9. Proyecciones de crecimiento en usuarios concurrentes y volumen de datos}
+[Describir estimaciones futuras de carga del sistema.]
+
+\subsubsection*{P10. Peaks de carga y estacionalidades}
+[Identificar períodos de alta demanda (ej.: campañas, cierres de mes, temporadas) 
+y su impacto en los sistemas.]
+
+\subsubsection*{P11. Tiempos de respuesta esperados para aplicaciones críticas}
+[Indicar los SLA o expectativas de latencia definidos para los sistemas de mayor criticidad.]
+
+\subsubsection*{P12. Niveles de disponibilidad y tolerancia a fallos requeridos}
+[Detallar los requisitos de uptime (ej.: 99,9\%) y las estrategias de tolerancia a fallos 
+actualmente exigidas o esperadas.]
+
+\subsubsection*{P13. Adopción de tecnologías nuevas y su impacto potencial}
+[Describir si la empresa contempla incorporar tecnologías emergentes y qué impacto 
+tendrían en su operación.]
+
+\subsubsection*{P14. Cambios en requerimientos de procesamiento con nuevas tecnologías (IA, Big Data, IoT, Cloud)}
+[Evaluar cómo la adopción de estas tecnologías incrementaría o redistribuiría la demanda 
+computacional.]
+
+\subsubsection*{P15. Planes de migración a la nube o expansión de infraestructura local}
+[Indicar si existe una hoja de ruta de migración cloud, en qué etapa se encuentra y 
+qué servicios están priorizados.]
+
+%-------------------------------------------------
+\subsection{Requisitos de Seguridad y Cumplimiento}
+%-------------------------------------------------
+
+\subsubsection*{P16. Normativas y estándares aplicables}
+[Identificar las regulaciones y estándares que la empresa debe cumplir (ej.: ISO 27001, 
+Ley 19.628, CMF, GDPR, normas sectoriales).]
+
+\subsubsection*{P17. Políticas internas de seguridad de la información}
+[Describir las políticas formales o informales que rigen el manejo de información sensible 
+dentro de la organización.]
+
+\subsubsection*{P18. Requerimientos de trazabilidad y auditoría}
+[Indicar qué procesos o datos requieren registro de auditoría y con qué nivel de detalle.]
+
+\subsubsection*{P19. Datos sensibles o confidenciales y su protección}
+[Clasificar los datos de mayor criticidad (personales, financieros, médicos, etc.) y las 
+medidas de protección implementadas.]
+
+\subsubsection*{P20. Políticas de respaldo y recuperación ante desastres}
+[Describir la estrategia de backup: frecuencia, retención, ubicación y pruebas de restauración.]
+
+\subsubsection*{P21. Gestión de accesos y privilegios a sistemas críticos}
+[Explicar cómo se controla el acceso a sistemas sensibles: IAM, roles, revisiones periódicas, 
+principio de menor privilegio.]
+
+\subsubsection*{P22. Medidas de protección contra ciberataques}
+[Listar controles implementados: firewalls, IDS/IPS, cifrado en tránsito y reposo, 
+segmentación de redes, etc.]
+
+\subsubsection*{P23. Controles para dispositivos móviles y BYOD}
+[Indicar políticas y herramientas de MDM (Mobile Device Management) o restricciones 
+para el uso de dispositivos personales en la red corporativa.]
+
+\subsubsection*{P24. Gestión de vulnerabilidades en el software}
+[Describir los procesos de gestión de parches, escaneo de vulnerabilidades y 
+respuesta ante CVEs críticos.]
+
+\subsubsection*{P25. Entrenamiento y concientización en seguridad de empleados}
+[Indicar si existen programas de capacitación, simulaciones de phishing u otras 
+iniciativas de cultura de seguridad.]
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PARTE III: RECURSOS Y OPERACIÓN ACTUAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parte III: Recursos y Operación Actual}
+
+%-------------------------------------------------
+\subsection{Infraestructura y Tecnología Actual}
+%-------------------------------------------------
+
+\subsubsection*{P26. Tecnologías actuales en uso (hardware, software, redes)}
+[Describir el stack tecnológico actual: servidores, sistemas operativos, bases de datos, 
+lenguajes de programación, plataformas de red, etc.]
+
+\subsubsection*{P27. Arquitectura tecnológica actual}
+[Indicar si la arquitectura es monolítica, de microservicios, cliente-servidor, N-capas, 
+híbrida u otra. Justificar brevemente.]
+
+\subsubsection*{P28. Uso de servicios en la nube, en sitio o híbridos}
+[Especificar qué modelo de despliegue se utiliza, para qué servicios o productos y 
+los criterios que llevaron a esa decisión.]
+
+\subsubsection*{P29. Sistemas heredados (\textit{legacy}) que deben mantenerse o migrarse}
+[Identificar sistemas críticos de larga data que representen deuda técnica o restricciones 
+para la evolución tecnológica.]
+
+\subsubsection*{P30. Niveles de automatización y monitoreo de la infraestructura}
+[Describir las herramientas de monitoreo (ej.: Zabbix, Datadog, CloudWatch), alertas 
+y nivel de automatización operacional existente.]
+
+\subsubsection*{P31. Plataformas tecnológicas externas integradas}
+[Listar integraciones con sistemas de terceros: ERPs, CRMs, pasarelas de pago, APIs 
+externas, etc.]
+
+\subsubsection*{P32. Gestión de actualizaciones de software y parches de seguridad}
+[Explicar el proceso y frecuencia de aplicación de actualizaciones y parches en los 
+distintos sistemas.]
+
+\subsubsection*{P33. Tecnologías evaluadas para futuras implementaciones}
+[Indicar qué tecnologías o plataformas están siendo evaluadas o piloteadas para incorporar 
+próximamente.]
+
+%-------------------------------------------------
+\subsection{Talento, Gobernanza y Cultura Tecnológica}
+%-------------------------------------------------
+
+\subsubsection*{P34. Capacidades técnicas del equipo interno}
+[Describir el perfil del equipo de TI: tamaño, roles, competencias y nivel de especialización.]
+
+\subsubsection*{P35. Modelo de gobierno de TI}
+[Indicar si la gestión de TI es centralizada, federada, ágil u otro modelo, y cómo se 
+toman las decisiones tecnológicas.]
+
+\subsubsection*{P36. Cultura respecto a innovación y adopción de nuevas tecnologías}
+[Evaluar si la organización tiene una cultura proactiva o reactiva frente a la innovación 
+tecnológica.]
+
+\subsubsection*{P37. Externalización de servicios tecnológicos}
+[Indicar qué servicios se tercerizan, con qué proveedores y bajo qué criterios de selección.]
+
+\subsubsection*{P38. Políticas de gestión del cambio y capacitación tecnológica}
+[Describir cómo se gestionan los cambios tecnológicos: change management, 
+capacitaciones y gestión del impacto en los usuarios.]
+
+\subsubsection*{P39. Medidas para evitar obsolescencia tecnológica}
+[Indicar si existen planes de renovación tecnológica, evaluaciones periódicas de plataformas 
+o políticas de ciclo de vida de sistemas.]
+
+\subsubsection*{P40. Colaboración entre equipos de TI y el resto de la empresa}
+[Describir los mecanismos de coordinación entre TI y las áreas de negocio.]
+
+\subsubsection*{P41. Capacidades de liderazgo y toma de decisiones en el área tecnológica}
+[Caracterizar el rol del CIO/CTO u otros líderes TI y su influencia en la estrategia 
+organizacional.]
+
+%-------------------------------------------------
+\subsection{Costos y ROI Esperado}
+%-------------------------------------------------
+
+\subsubsection*{P42. Presupuesto asignado a tecnología y porcentaje sobre ventas}
+[Indicar el presupuesto anual de TI y su proporción respecto a los ingresos de la empresa.]
+
+\subsubsection*{P43. Evaluación del retorno de inversión (ROI) de proyectos tecnológicos}
+[Explicar la metodología utilizada para evaluar y justificar inversiones en tecnología.]
+
+\subsubsection*{P44. Restricciones económicas a corto, mediano y largo plazo}
+[Describir limitaciones presupuestarias que condicionan las decisiones tecnológicas.]
+
+\subsubsection*{P45. Modelos de pago por uso o suscripciones para infraestructura y software}
+[Indicar si la empresa utiliza o contempla modelos OPEX (cloud, SaaS, licencias por 
+suscripción) en lugar de CAPEX.]
+
+\subsubsection*{P46. Costos adicionales anticipados por adopción de nuevas tecnologías}
+[Estimar los costos de migración, capacitación, licenciamiento y operación asociados 
+a la transformación tecnológica proyectada.]
+
+\subsubsection*{P47. Gestión de costos operativos y de mantenimiento de la infraestructura}
+[Describir cómo se controlan y optimizan los costos de operación y mantenimiento TI.]
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PARTE IV: REQUERIMIENTOS EXTERNOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parte IV: Requerimientos Externos}
+
+%-------------------------------------------------
+\subsection{Requerimientos de Terceras Partes (Proveedores y Socios)}
+%-------------------------------------------------
+
+\subsubsection*{P48. Proveedores externos críticos para el negocio}
+[Identificar los proveedores de software, infraestructura y servicios de los que depende 
+críticamente la operación de la empresa.]
+
+\subsubsection*{P49. Gestión de contratos y SLA con proveedores}
+[Describir cómo se formalizan, monitorean y renuevan los contratos y acuerdos de nivel 
+de servicio con terceros.]
+
+\subsubsection*{P50. Requisitos de seguridad, confidencialidad y cumplimiento exigidos a terceros}
+[Indicar qué exigencias normativas o contractuales se imponen a los proveedores en 
+materia de seguridad de información.]
+
+\subsubsection*{P51. Dependencias de terceros para la continuidad del negocio}
+[Identificar qué servicios o componentes de la infraestructura dependen de terceros 
+y representan un riesgo de continuidad.]
+
+\subsubsection*{P52. Procesos de validación de proveedores}
+[Explicar cómo se evalúa y certifica que los proveedores cumplen estándares de calidad, 
+seguridad y continuidad (ej.: auditorías, certificaciones ISO, cuestionarios de seguridad).]
+
+\subsubsection*{P53. Integraciones de sistemas con terceros y garantías de compatibilidad y seguridad}
+[Describir las integraciones existentes (APIs, EDI, webhooks, etc.) y los controles 
+implementados para asegurar su seguridad y estabilidad.]
+
+\subsubsection*{P54. Medidas para gestionar riesgos relacionados con proveedores críticos}
+[Indicar estrategias de mitigación ante fallas de proveedores: proveedores alternativos, 
+cláusulas contractuales, planes de contingencia.]
+
+%-------------------------------------------------
+\subsection{Continuidad del Negocio y Gestión de Crisis}
+%-------------------------------------------------
+
+\subsubsection*{P55. Planes de continuidad del negocio y su integración con TI}
+[Describir si existe un Plan de Continuidad del Negocio (BCP) formal y cómo se articula 
+con la infraestructura tecnológica.]
+
+\subsubsection*{P56. Procesos definidos para recuperación ante desastres tecnológicos}
+[Detallar el Plan de Recuperación ante Desastres (DRP): procedimientos, responsables 
+y sistemas cubiertos.]
+
+\subsubsection*{P57. MTPoD, DRT y RTO para sistemas críticos}
+[Indicar los parámetros de continuidad definidos: tiempo máximo tolerable de interrupción 
+(MTPoD), tiempo deseado de recuperación (DRT) y objetivo de tiempo de recuperación (RTO).]
+
+% Tabla de parámetros de continuidad
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{>{\bfseries}l >{\centering\arraybackslash}p{2cm} X}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Parámetro}} & 
+\textcolor{white}{\textbf{Valor}} & 
+\textcolor{white}{\textbf{Descripción}} \\
+\midrule
+MTPoD & \ph{HH:MM} & Tiempo máximo tolerable de interrupción \\
+\rowcolor{rowgray}
+DRT   & \ph{HH:MM} & Tiempo deseado de recuperación a operación mínima \\
+MBCO  & \ph{\%}    & Nivel mínimo de servicio aceptable durante la contingencia \\
+\rowcolor{rowgray}
+MTA   & \ph{HH:MM} & Tiempo máximo de validez de la operación alternativa \\
+RTO   & \ph{HH:MM} & Objetivo de tiempo de recuperación a operación normal \\
+\bottomrule
+\end{tabularx}
+\caption{Parámetros de continuidad operativa definidos por la empresa (ISO 22301).}
+\end{table}
+
+\subsubsection*{P58. Pruebas y simulacros de continuidad realizados periódicamente}
+[Indicar con qué frecuencia se realizan ejercicios de continuidad, qué escenarios se 
+simulan y qué resultados han arrojado.]
+
+\subsubsection*{P59. Disponibilidad continua de servicios ante fallos imprevistos}
+[Describir las estrategias implementadas para mantener la operación ante fallas 
+no planificadas.]
+
+\subsubsection*{P60. Estrategia de redundancia y recuperación geográfica}
+[Indicar si existe redundancia geográfica (multi-zona, multi-región) y cómo se 
+gestiona una falla regional.]
+
+\subsubsection*{P61. Herramientas de monitoreo y alerta para detectar incidentes}
+[Listar las plataformas de monitoreo utilizadas y los umbrales de alerta configurados 
+para sistemas críticos.]
+
+\subsubsection*{P62. Capacidades de recuperación de datos y aplicaciones a nivel de infraestructura}
+[Describir las capacidades de backup, restauración y failover disponibles para los 
+sistemas más críticos.]
+
+%-------------------------------------------------
+\subsection{Niveles de Servicio y Soporte Informático}
+%-------------------------------------------------
+
+\subsubsection*{P63. Tiempo de respuesta estándar para incidentes tecnológicos críticos}
+[Indicar los tiempos de primera respuesta y resolución definidos para incidentes de 
+alta criticidad.]
+
+\subsubsection*{P64. SLA para distintas plataformas y servicios tecnológicos}
+[Describir los niveles de servicio formalizados para los principales sistemas de la empresa.]
+
+\subsubsection*{P65. Gestión de solicitudes y tickets de soporte técnico}
+[Explicar la herramienta y el proceso utilizado para recibir, clasificar y resolver 
+solicitudes de soporte.]
+
+\subsubsection*{P66. Proceso de escalamiento de problemas dentro del soporte técnico}
+[Describir los niveles de escalamiento (N1, N2, N3) y los criterios para activar cada uno.]
+
+\subsubsection*{P67. Herramientas o plataformas de gestión de incidencias y soporte}
+[Listar las plataformas ITSM utilizadas (ej.: ServiceNow, Jira Service Management, 
+Freshdesk) y sus funcionalidades principales.]
+
+\subsubsection*{P68. Acuerdos con proveedores de soporte fuera del horario laboral}
+[Indicar si existe soporte 24/7 o acuerdos de on-call con proveedores para atender 
+incidentes fuera de horario.]
+
+\subsubsection*{P69. Medición del desempeño del soporte técnico}
+[Describir las métricas utilizadas para evaluar la calidad del soporte: MTTR, MTTD, 
+satisfacción del usuario interno, etc.]
+
+\subsubsection*{P70. Protocolos de comunicación con soporte de terceros ante incidentes críticos}
+[Indicar los canales y procedimientos formales para escalar incidentes a proveedores externos.]
+
+\subsubsection*{P71. Nivel de accesibilidad y cobertura del soporte técnico durante emergencias}
+[Describir la cobertura del soporte (horario, idioma, canales) y cómo se garantiza 
+la atención en situaciones de emergencia.]
+
+\subsubsection*{P72. Medidas para evitar problemas recurrentes en los sistemas de soporte}
+[Indicar si existe un proceso de gestión de problemas (problem management) para 
+identificar y eliminar causas raíz de incidentes repetitivos.]
+
+\subsubsection*{P73. KPIs utilizados para evaluar la efectividad del soporte informático}
+[Listar los indicadores clave de desempeño definidos para el área de soporte TI.]
+
+% Tabla KPIs de soporte
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X >{\centering\arraybackslash}p{2.8cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{KPI}} & 
+\textcolor{white}{\textbf{Descripción}} & 
+\textcolor{white}{\textbf{Valor actual / Meta}} \\
+\midrule
+MTTD & Tiempo medio de detección de incidentes & \ph{Valor} \\
+\rowcolor{rowgray}
+MTTR & Tiempo medio de resolución de incidentes & \ph{Valor} \\
+Tasa de resolución N1 (\%) & Incidentes resueltos en primer nivel sin escalamiento & \ph{Valor} \\
+\rowcolor{rowgray}
+Satisfacción usuario interno & Encuesta de satisfacción del soporte & \ph{Valor} \\
+Incidentes / período & Cantidad de incidentes registrados por mes & \ph{Valor} \\
+\rowcolor{rowgray}
+Tasa de falsos positivos (\%) & Alertas que no corresponden a amenazas reales & \ph{Valor} \\
+\bottomrule
+\end{tabularx}
+\caption{KPIs de soporte informático definidos por la empresa.}
+\end{table}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CONCLUSIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusiones}
+
+El presente avance (Fase A) permitió establecer una visión integral de [nombre de la empresa] 
+desde sus dimensiones estratégica, operacional y normativa. A partir del levantamiento de 
+información realizado, se identifican los siguientes aspectos relevantes que condicionarán 
+las propuestas arquitectónicas de la Fase B:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Estrategia y crecimiento:} [Síntesis del hallazgo más relevante de la Parte II.]
+    \item \textbf{Infraestructura y deuda técnica:} [Síntesis del hallazgo más relevante de la Parte III.]
+    \item \textbf{Continuidad y seguridad:} [Síntesis del hallazgo más relevante de la Parte IV.]
+    \item \textbf{Patrones anticipados:} [Indicar qué combinaciones de condiciones emergen con 
+    más frecuencia y que ya orientan la propuesta de arquitectura de la Fase B.]
+\end{itemize}
+
+Estos hallazgos constituyen la base del análisis estratégico-tecnológico que se desarrollará 
+en la Fase B, donde se vincularán con modelos y arquitecturas computacionales emergentes 
+para formular recomendaciones concretas y fundamentadas.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Referencias}
+% \begin{enumerate}
+%   \item Elliott, J. y García, C. (2026). \textit{Arquitecturas Emergentes -- Material de Clases S1}. 
+%   Universidad Diego Portales, EIT.
+%   \item ISO 22301:2019. \textit{Security and resilience -- Business continuity management systems}.
+%   \item ISO 27001:2022. \textit{Information security management systems -- Requirements}.
+%   \item ISO 31000:2018. \textit{Risk management -- Guidelines}.
+% \end{enumerate}
+
+\end{document}
