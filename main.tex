@@ -16,11 +16,8 @@
 \usepackage{makecell}
 \usepackage[table]{xcolor}
 
-% Colores para tablas
 \definecolor{headerblue}{RGB}{31,73,125}
 \definecolor{rowgray}{RGB}{242,242,242}
-\newcommand{\ph}[1]{[#1]}
-%%%%%%%%%%%%%%%%%%%%%
 
 \title{Taller Final}
 \date{22 de mayo de 2026}
@@ -44,26 +41,23 @@
     \vspace*{0.5 cm}
     \includegraphics[scale=0.5]{img/unnamed.png}\\[1.0 cm]
     \textsc{\LARGE Universidad Diego Portales}\\[0.2 cm]
-    \textsc{\large ESCUELA DE INFORMÁTICA \& TELECOMUNICACIONES}\\[1.5 cm]
+    \textsc{\large ESCUELA DE INFORM\'ATICA \& TELECOMUNICACIONES}\\[1.5 cm]
     \textsc{\LARGE Arquitecturas Emergentes}\\[1.0 cm]
-
     \rule{\linewidth}{0.2 mm}\\[0.4 cm]
     {\huge \bfseries \thetitle}\\[0.4 cm]
     {\Large \textit{Fase A: Informe de Avance}}\\[0.4 cm]
     \rule{\linewidth}{0.2 mm}\\[1.5 cm]
-
     \begin{minipage}{1.0\textwidth}
         \begin{center} \large
             \emph{Profesores:}\\[0.2cm]
-            Carlos García\\[0.1cm]
+            Carlos Garc\'ia\\[0.1cm]
             Jorge Elliott\\[0.8cm]
             \emph{Autores:}\\[0.2cm]
-            Diego Muñoz\\[0.1cm]
-            Ignacio Pastén\\[0.1cm]
+            Diego Mu\~noz\\[0.1cm]
+            Ignacio Past\'en\\[0.1cm]
             Vicente Leiva
         \end{center}
     \end{minipage}
-
     \vfill
     {\large \thedate}\\[2 cm]
 \end{titlepage}
@@ -73,507 +67,906 @@
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%              INTRODUCCIÓN
+%              INTRODUCCI\'ON
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introducción}
+\section{Introducci\'on}
 
-El presente informe corresponde a la \textbf{Fase A} del Taller Final de la asignatura 
-\textit{Arquitecturas Emergentes}, cuyo objetivo es levantar información estratégica, 
-operacional y normativa de una empresa real, como base para la posterior justificación 
-y propuesta de una arquitectura tecnológica alineada con su negocio (Fase B).
+El presente informe corresponde a la \textbf{Fase A} del Taller Final de la asignatura
+\textit{Arquitecturas Emergentes}, cuyo objetivo es levantar informaci\'on estrat\'egica,
+operacional y normativa de una empresa real, como base para la posterior justificaci\'on
+y propuesta de una arquitectura tecnol\'ogica alineada con su negocio (Fase B).
 
-La metodología de trabajo consistió en entrevistas directas con representantes de la empresa 
-seleccionada, complementadas con investigación propia del equipo. Este documento estructura 
-los hallazgos en cuatro partes: identificación de la empresa y sus contrapartes (Parte I), 
-aspectos estratégicos del negocio (Parte II), recursos y operación actual (Parte III) y 
-requerimientos externos (Parte IV).
+La empresa seleccionada es \textbf{R RESTS GROUP SPA}, compa\~n\'ia especializada en
+gerenciamiento de riesgos log\'isticos y operacionales, con base en Santiago de Chile.
+La metodolog\'ia de trabajo consisti\'o en entrevistas con el Coordinador de TI de la empresa,
+complementadas con investigaci\'on propia del equipo y el conocimiento directo adquirido
+durante la pr\'actica profesional realizada en la organizaci\'on.
+
+Este documento estructura los hallazgos en cuatro partes: identificaci\'on de la empresa
+y sus contrapartes (Parte I), aspectos estrat\'egicos del negocio (Parte II), recursos y
+operaci\'on actual (Parte III) y requerimientos externos (Parte IV).
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   PARTE I: CONTACTO CON LA EMPRESA
+%   PARTE I
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Parte I: Contacto con la Empresa e Identificación de las Contrapartes}
+\section{Parte I: Contacto con la Empresa e Identificaci\'on de las Contrapartes}
 
-\subsection{Caracterización de la Empresa}
-
-% ----------------------------------------------------------------
-%  COMPLETAR: Razón social, rubro, marcas, forma legal, antigüedad,
-%  propiedad/dependencia, tamaño (personal, ventas, locales, etc.)
-% ----------------------------------------------------------------
+\subsection{Caracterizaci\'on de la Empresa}
 
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
 \begin{tabularx}{\textwidth}{>{\bfseries}l X}
 \toprule
-\rowcolor{headerblue}\multicolumn{2}{c}{\textcolor{white}{\textbf{Ficha de Identificación de la Empresa}}} \\
+\rowcolor{headerblue}\multicolumn{2}{c}{\textcolor{white}{\textbf{Ficha de Identificaci\'on de la Empresa}}} \\
 \midrule
-Razón Social        & \ph{Completar} \\
+Raz\'on Social          & R RESTS GROUP SPA \\
 \rowcolor{rowgray}
-Rubro / Industria   & \ph{Completar} \\
-Marcas              & \ph{Completar} \\
+Rubro / Industria       & Gerenciamiento de riesgos log\'isticos y operacionales; TI aplicada al transporte y seguridad de la cadena de suministro \\
+Marca comercial         & Rests \\
 \rowcolor{rowgray}
-Forma Legal         & \ph{Completar} \\
-Antigüedad          & \ph{Completar} \\
+Forma Legal             & Sociedad por Acciones (SpA) \\
+Antig\"uedad            & 4 a\~nos de operaci\'on (fundada en 2021) \\
 \rowcolor{rowgray}
-Propiedad / Dependencia & \ph{Completar} \\
-N.º de Empleados    & \ph{Completar} \\
+Propiedad / Dependencia & Empresa independiente; CEO Sim\'on V\'asquez \\
+N.\textordmasculine{} de Empleados      & 35 en total, de los cuales 15 pertenecen al \'area de TI \\
 \rowcolor{rowgray}
-Ventas Anuales (aprox.) & \ph{Completar} \\
-N.º de Locales / Sucursales & \ph{Completar} \\
+Ventas Anuales          & Informaci\'on no p\'ublica \\
+N.\textordmasculine{} de Locales        & 1 oficina (Av. Vitacura 2939, Las Condes, Regi\'on Metropolitana) \\
 \rowcolor{rowgray}
-Presencia Geográfica & \ph{Completar} \\
+Presencia Geogr\'afica  & Chile (sede principal, Las Condes); clientes nacionales de sectores log\'isticos y de transporte \\
 \bottomrule
 \end{tabularx}
-\caption{Identificación general de la empresa analizada.}
+\caption{Identificaci\'on general de la empresa analizada.}
 \end{table}
 
 \subsection{Contrapartes Entrevistadas}
 
-% ----------------------------------------------------------------
-%  COMPLETAR: Nombre, cargo, profesión y área de cada entrevistado
-% ----------------------------------------------------------------
-
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{3cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{3.5cm} >{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{3.2cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{3.5cm} >{\centering\arraybackslash}X}
 \toprule
 \rowcolor{headerblue}
-\textcolor{white}{\textbf{Nombre}} & 
-\textcolor{white}{\textbf{Cargo}} & 
-\textcolor{white}{\textbf{Profesión}} & 
-\textcolor{white}{\textbf{Área}} \\
+\textcolor{white}{\textbf{Nombre}} &
+\textcolor{white}{\textbf{Cargo}} &
+\textcolor{white}{\textbf{Profesi\'on}} &
+\textcolor{white}{\textbf{\'Area}} \\
 \midrule
-\ph{Nombre 1} & \ph{Cargo} & \ph{Profesión} & \ph{Área} \\
-\rowcolor{rowgray}
-\ph{Nombre 2} & \ph{Cargo} & \ph{Profesión} & \ph{Área} \\
+Arquimedes Infante & Coordinador de TI & Ingeniero en Inform\'atica & Tecnolog\'ia de la Informaci\'on \\
 \bottomrule
 \end{tabularx}
-\caption{Contrapartes de la empresa contactadas para el desarrollo de este informe.}
+\caption{Contraparte de la empresa contactada para el desarrollo de este informe.}
 \end{table}
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   PARTE II: ASPECTOS ESTRATÉGICOS DEL NEGOCIO
+%   PARTE II
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Parte II: Aspectos Estratégicos del Negocio}
+\section{Parte II: Aspectos Estrat\'egicos del Negocio}
 
-%-------------------------------------------------
 \subsection{Estrategia Corporativa y de Negocio}
-%-------------------------------------------------
 
-\subsubsection*{P1. Misión, visión y objetivos estratégicos}
-% ----------------------------------------------------------------
-%  COMPLETAR (~media página, Arial 10 equivalente en LaTeX)
-% ----------------------------------------------------------------
-[Describir la misión, visión y objetivos estratégicos declarados por la empresa, tal como fueron 
-comunicados en la entrevista o publicados oficialmente.]
+\subsubsection*{P1. Misi\'on, visi\'on y objetivos estrat\'egicos}
 
-\subsubsection*{P2. Productos o servicios críticos para el negocio}
-[Identificar cuáles son los productos o servicios de mayor relevancia estratégica y/o ingresos 
-para la organización.]
+La misi\'on de R RESTS GROUP SPA es propiciar una optimizaci\'on de los recursos mediante
+el levantamiento y sistematizaci\'on de informaci\'on de relevancia, ofreciendo asesor\'ias
+y acompa\~namiento en el establecimiento de procedimientos log\'isticos e implementaci\'on
+de soluciones tecnol\'ogicas para la cobertura, seguimiento y resguardo controlado de los riesgos
+operacionales de sus clientes.
 
-\subsubsection*{P3. Principales procesos de negocio que sostienen la operación}
-[Describir los procesos centrales (core) que permiten la entrega de valor al cliente y el 
-funcionamiento continuo del negocio.]
+La visi\'on estrat\'egica de la empresa apunta a competir a nivel internacional con las principales
+compa\~n\'ias de gerenciamiento de riesgos y log\'istica, posicion\'andose como un referente
+tecnol\'ogico en la regi\'on. Los objetivos estrat\'egicos actuales incluyen la expansi\'on de su
+cartera de clientes a mercados internacionales, el desarrollo de nuevas plataformas tecnol\'ogicas
+propias que automaticen y optimicen la operaci\'on, y la incorporaci\'on de inteligencia artificial
+y an\'alisis de datos como ejes diferenciales de sus servicios. Adicionalmente, la empresa contempla
+en el corto plazo la incorporaci\'on de un servicio orientado a la reducci\'on de huella de carbono
+en operaciones log\'isticas, lo que refleja un enfoque de innovaci\'on continua y responsabilidad
+ambiental alineado con tendencias internacionales.
 
-\subsubsection*{P4. Modelo operativo actual y evolución esperada}
-[Explicar cómo opera actualmente la empresa y cuál es la visión de cómo evolucionará 
-su modelo operativo en el mediano plazo.]
+\subsubsection*{P2. Productos o servicios cr\'iticos para el negocio}
 
-\subsubsection*{P5. Proyección de crecimiento en los próximos 3--5 años}
-[Indicar estimaciones de crecimiento en clientes, mercados, transacciones o unidades 
-de negocio.]
+El servicio m\'as cr\'itico para el negocio es el \textbf{monitoreo de flotas 24/7}, que consiste
+en la supervisi\'on continua en tiempo real de cargas y rutas mediante una plataforma integradora
+de GPS, gestionando alertas y eventos de riesgo de forma proactiva. Este servicio es el principal
+generador de ingresos y el que define la propuesta de valor central de Rests ante sus clientes.
 
-\subsubsection*{P6. Principales riesgos del negocio con impacto en infraestructura tecnológica}
-[Detallar los riesgos identificados por la empresa que puedan afectar directamente la 
-continuidad o desempeño de su infraestructura TI.]
+Complementariamente, los servicios de \textbf{an\'alisis de datos} (con Power BI como herramienta
+principal), las \textbf{inspecciones de almacenaje} y los servicios de \textbf{escolta y apertura
+de candados satelitales} conforman el portafolio completo. Entre los clientes actuales se
+identifican empresas como Mondelez, San Jos\'e, D\&C y Caleta, lo que refleja presencia en
+rubros de consumo masivo, construcci\'on y log\'istica. La continuidad operativa del monitoreo
+es de alta criticidad, dado que cualquier interrupci\'on impacta directamente la seguridad de
+la carga de los clientes.
 
-\subsubsection*{P7. Estrategia a largo plazo: expansión geográfica y nuevos productos/mercados}
-[Describir planes de expansión, internacionalización, nuevas líneas de negocio o diversificación 
-de servicios.]
+\subsubsection*{P3. Principales procesos de negocio que sostienen la operaci\'on}
 
-%-------------------------------------------------
+Los procesos centrales de Rests son: (1) el \textbf{monitoreo en tiempo real} de viajes y flotas
+mediante el sistema GRLOG, operado por el equipo de operadores durante turnos de 24 horas;
+(2) el \textbf{an\'alisis y reporte de datos} de eventos y riesgos mediante Power BI, que permite
+generar informes para los clientes; (3) la \textbf{automatizaci\'on de carga de viajes} al sistema
+de monitoreo mediante planillas Excel, gestionada por la plataforma de automatizaciones desarrollada
+internamente; y (4) la \textbf{gesti\'on de alertas cr\'iticas}, donde el sistema de inteligencia
+artificial basado en GPT-5 nano de OpenAI apoya el tratamiento y clasificaci\'on de eventos en tiempo
+real. El soporte t\'ecnico interno se gestiona por un sistema de tickets v\'ia correo electr\'onico,
+coordinado por el equipo de TI.
+
+\subsubsection*{P4. Modelo operativo actual y evoluci\'on esperada}
+
+El modelo operativo actual de Rests es h\'ibrido en cuanto a modalidad de trabajo (presencial y
+remoto), con un esquema de atenci\'on 24/7 sostenido por operadores que supervisan los sistemas
+de monitoreo de manera continua. La gesti\'on de TI es centralizada bajo el liderazgo del
+Coordinador de TI, Arquimedes Infante, quien supervisa el desarrollo, las operaciones y el soporte
+de los sistemas internos.
+
+La evoluci\'on esperada del modelo apunta a una mayor automatizaci\'on de procesos operativos,
+reduciendo la intervenci\'on manual en la carga de viajes y el tratamiento de alertas mediante
+el uso de inteligencia artificial. Asimismo, se proyecta incorporar nuevas capas de an\'alisis
+predictivo que permitan anticipar riesgos en rutas antes de que ocurran, transitando desde un
+modelo reactivo a uno m\'as proactivo y predictivo.
+
+\subsubsection*{P5. Proyecci\'on de crecimiento en los pr\'oximos 3--5 a\~nos}
+
+La proyecci\'on estrat\'egica de Rests apunta a la internacionalizaci\'on de sus servicios,
+buscando competir con empresas de gerenciamiento de riesgos a nivel latinoamericano. La adopci\'on de plataformas tecnol\'ogicas de alcance internacional, como el sistema GRLOG, refleja una orientaci\'on hacia est\'andares del mercado latinoamericano y constituye un primer paso hacia esa expansi\'on. En el mediano plazo se contempla el crecimiento de la cartera de clientes nacionales e internacionales, la incorporaci\'on del servicio de huella de
+carbono como nueva l\'inea de negocio, y el desarrollo de m\'as capacidades tecnol\'ogicas
+propias que reduzcan la dependencia de sistemas externos como GRLOG.
+
+\subsubsection*{P6. Principales riesgos del negocio con impacto en infraestructura tecnol\'ogica}
+
+Los principales riesgos identificados son: (1) la \textbf{dependencia cr\'itica de GRLOG},
+sistema externo cuya eventual ca\'ida interrumpe directamente el servicio de monitoreo 24/7;
+(2) \textbf{fallos de conectividad o GPS} que afecten la recepci\'on de datos en tiempo real;
+(3) \textbf{riesgos de ciberseguridad}, mitigados en parte por la infraestructura de Amazon
+Web Services; (4) la \textbf{dependencia de la API de OpenAI} para el tratamiento autom\'atico
+de alertas, cuya interrupci\'on afectar\'ia la automatizaci\'on de la plataforma interna; y
+(5) la \textbf{escalabilidad} ante un aumento significativo de clientes o transacciones, dado
+que la arquitectura actual no ha sido formalmente dimensionada para escenarios de crecimiento
+internacional.
+
+\subsubsection*{P7. Estrategia a largo plazo: expansi\'on geogr\'afica y nuevos productos/mercados}
+
+A largo plazo, Rests busca posicionarse como una empresa de referencia en gerenciamiento de
+riesgos log\'isticos a nivel latinoamericano. La estrategia contempla la expansi\'on hacia
+mercados internacionales donde la seguridad de la cadena de suministro es cr\'itica, como
+Brasil, Per\'u y Colombia. Adicionalmente, la incorporaci\'on de un servicio de gesti\'on de
+huella de carbono en operaciones log\'isticas representa una nueva l\'inea de negocio orientada
+a la sostenibilidad, alineada con regulaciones internacionales y tendencias ESG que son
+crecientemente exigidas por grandes clientes corporativos.
+
 \subsection{Proyecciones de Procesamiento y Escalabilidad}
-%-------------------------------------------------
 
 \subsubsection*{P8. Cargas actuales de procesamiento}
-[Indicar volúmenes de transacciones, datos procesados y usuarios activos actualmente.]
+
+Actualmente el sistema opera con m\'as de 10 operadores trabajando de forma simult\'anea en
+turnos diarios, gestionando m\'as de 700 transacciones por turno. Estas transacciones corresponden
+principalmente a registros de viajes, ocurrencias, alertas GPS y eventos de riesgo monitoreados
+en tiempo real. El flujo de datos GPS es continuo, con actualizaciones peri\'odicas del orden
+de segundos, lo que implica una carga de datos de alta frecuencia sobre el sistema de monitoreo
+GRLOG y la plataforma de automatizaciones.
 
 \subsubsection*{P9. Proyecciones de crecimiento en usuarios concurrentes y volumen de datos}
-[Describir estimaciones futuras de carga del sistema.]
+
+No existen proyecciones formales documentadas de crecimiento en volumen de usuarios o datos.
+Sin embargo, la estrategia de internacionalizaci\'on de la empresa implica que, en la medida
+que se incorporen nuevos clientes de otros pa\'ises, el n\'umero de viajes monitoreados, alertas
+generadas y operadores necesarios crecer\'a de manera proporcional. Este crecimiento podr\'ia
+escalar significativamente el volumen de transacciones y la demanda sobre la infraestructura,
+especialmente sobre la plataforma de automatizaciones y la API de OpenAI.
 
 \subsubsection*{P10. Peaks de carga y estacionalidades}
-[Identificar períodos de alta demanda (ej.: campañas, cierres de mes, temporadas) 
-y su impacto en los sistemas.]
 
-\subsubsection*{P11. Tiempos de respuesta esperados para aplicaciones críticas}
-[Indicar los SLA o expectativas de latencia definidos para los sistemas de mayor criticidad.]
+La naturaleza del negocio implica una carga pr\'acticamente constante durante las 24 horas del
+d\'ia, dado que el monitoreo es continuo. No obstante, los peaks m\'as pronunciados ocurren
+cuando se registran eventos de riesgo simult\'aneos en m\'ultiples rutas, generando r\'afagas
+de alertas que deben ser procesadas en tiempo real. El flujo de datos GPS opera con actualizaciones
+peri\'odicas por segundos, lo que constituye una demanda sostenida m\'as que picos estacionales
+espec\'ificos. Eventos como cierres de v\'ias, condiciones clim\'aticas adversas o temporadas
+de alta actividad log\'istica pueden incrementar puntualmente el volumen de alertas.
+
+\subsubsection*{P11. Tiempos de respuesta esperados para aplicaciones cr\'iticas}
+
+El servicio de monitoreo 24/7 exige tiempos de respuesta muy bajos para la recepci\'on y
+procesamiento de alertas, dado que cualquier demora puede comprometer la seguridad de la carga
+monitoreada. Si bien no existen SLA formalmente documentados para los sistemas internos, la
+naturaleza operacional del negocio impone impl\'icitamente requerimientos de latencia del orden
+de segundos para la detecci\'on y notificaci\'on de eventos cr\'iticos. La plataforma de
+automatizaciones debe procesar y cargar viajes en tiempos razonables para no interrumpir
+el flujo operacional de los operadores.
 
 \subsubsection*{P12. Niveles de disponibilidad y tolerancia a fallos requeridos}
-[Detallar los requisitos de uptime (ej.: 99,9\%) y las estrategias de tolerancia a fallos 
-actualmente exigidas o esperadas.]
 
-\subsubsection*{P13. Adopción de tecnologías nuevas y su impacto potencial}
-[Describir si la empresa contempla incorporar tecnologías emergentes y qué impacto 
-tendrían en su operación.]
+Dado que el monitoreo es un servicio 24/7 y los clientes dependen de \'el para la seguridad
+de sus operaciones log\'isticas, el nivel de disponibilidad requerido es muy alto, siendo
+deseable un uptime cercano al 99{,}9\%. La tolerancia a fallos es relevante especialmente
+para el sistema GRLOG, que es el componente m\'as cr\'itico. La infraestructura en la nube
+de AWS provee un nivel base de resiliencia, pero no se han definido formalmente estrategias
+de failover o redundancia activa para todos los componentes del sistema.
 
-\subsubsection*{P14. Cambios en requerimientos de procesamiento con nuevas tecnologías (IA, Big Data, IoT, Cloud)}
-[Evaluar cómo la adopción de estas tecnologías incrementaría o redistribuiría la demanda 
-computacional.]
+\subsubsection*{P13. Adopci\'on de tecnolog\'ias nuevas y su impacto potencial}
 
-\subsubsection*{P15. Planes de migración a la nube o expansión de infraestructura local}
-[Indicar si existe una hoja de ruta de migración cloud, en qué etapa se encuentra y 
-qué servicios están priorizados.]
+La empresa ya ha adoptado inteligencia artificial como tecnolog\'ia emergente, incorporando
+el modelo GPT-5 nano de OpenAI para el tratamiento autom\'atico de alertas y la transformaci\'on
+de datos en la plataforma de automatizaciones. El impacto de esta adopci\'on es positivo en
+t\'erminos de eficiencia operacional, reduciendo la carga manual sobre los operadores. A futuro
+se contempla la incorporaci\'on de an\'alisis predictivo para anticipar riesgos en rutas, y un
+servicio relacionado con la medici\'on y gesti\'on de huella de carbono, lo que requerir\'a
+capacidades adicionales de procesamiento de datos ambientales y log\'isticos.
 
-%-------------------------------------------------
+\subsubsection*{P14. Cambios en requerimientos de procesamiento con nuevas tecnolog\'ias}
+
+La incorporaci\'on de IA via API de OpenAI ya incrementa el procesamiento necesario por viaje,
+ya que cada transformaci\'on de datos implica llamadas a un modelo de lenguaje externo. A medida
+que el volumen de viajes crezca con la expansi\'on internacional, el costo y volumen de llamadas
+a la API de OpenAI escalar\'an proporcionalmente. Si se incorpora an\'alisis predictivo propio
+(modelos ML internos), se requerir\'a infraestructura de c\'omputo m\'as robusta. El futuro
+servicio de huella de carbono a\~nadir\'a una nueva fuente de datos a procesar e integrar con
+los sistemas existentes.
+
+\subsubsection*{P15. Planes de migraci\'on a la nube o expansi\'on de infraestructura local}
+
+La empresa opera bajo un modelo cloud-native desde su concepci\'on, utilizando servicios PaaS
+en AWS para la infraestructura de sus aplicaciones y MongoDB como base de datos en la nube.
+No existe una migraci\'on pendiente desde infraestructura local, sino que la estrategia apunta
+a la consolidaci\'on y posible expansi\'on de los servicios en la nube a medida que crezca la
+demanda. No se han definido planes formales de migraci\'on o expansi\'on de infraestructura a
+corto plazo.
+
 \subsection{Requisitos de Seguridad y Cumplimiento}
-%-------------------------------------------------
 
-\subsubsection*{P16. Normativas y estándares aplicables}
-[Identificar las regulaciones y estándares que la empresa debe cumplir (ej.: ISO 27001, 
-Ley 19.628, CMF, GDPR, normas sectoriales).]
+\subsubsection*{P16. Normativas y est\'andares aplicables}
 
-\subsubsection*{P17. Políticas internas de seguridad de la información}
-[Describir las políticas formales o informales que rigen el manejo de información sensible 
-dentro de la organización.]
+Dado que el sistema GRLOG opera bajo un dominio brasilero (grlogapp.com.br) y la empresa mantiene
+operaciones e integraciones de datos con esa plataforma, existe exposici\'on a regulaciones de
+protecci\'on de datos de Brasil, particularmente la \textbf{LGPD} (Lei Geral de Prote\c{c}\~ao de
+Dados), equivalente brasile\~no del GDPR europeo. En Chile, aplica la \textbf{Ley 19.628} sobre
+protecci\'on de la vida privada, que regula el tratamiento de datos personales. Adicionalmente,
+la empresa mantiene respaldos internacionales de bases de datos como medida de cumplimiento ante
+posibles ca\'idas del sistema, lo que refleja conciencia sobre la necesidad de resiliencia
+operacional ante regulaciones de continuidad de servicio.
 
-\subsubsection*{P18. Requerimientos de trazabilidad y auditoría}
-[Indicar qué procesos o datos requieren registro de auditoría y con qué nivel de detalle.]
+\subsubsection*{P17. Pol\'iticas internas de seguridad de la informaci\'on}
 
-\subsubsection*{P19. Datos sensibles o confidenciales y su protección}
-[Clasificar los datos de mayor criticidad (personales, financieros, médicos, etc.) y las 
-medidas de protección implementadas.]
+La ciberseguridad de la infraestructura es delegada en gran parte a Amazon Web Services, que
+provee un conjunto de controles de seguridad a nivel de nube (firewall, IAM, cifrado, entre otros).
+Complementariamente, la empresa trabaja con CyberArmor, una consultora externa que provee servicios
+de desarrollo de software y soporte en seguridad. No se han identificado pol\'iticas formales internas
+de seguridad documentadas bajo un est\'andar como ISO 27001, lo que representa un \'area de mejora
+para la organizaci\'on a medida que escale sus operaciones internacionales.
 
-\subsubsection*{P20. Políticas de respaldo y recuperación ante desastres}
-[Describir la estrategia de backup: frecuencia, retención, ubicación y pruebas de restauración.]
+\subsubsection*{P18. Requerimientos de trazabilidad y auditor\'ia}
 
-\subsubsection*{P21. Gestión de accesos y privilegios a sistemas críticos}
-[Explicar cómo se controla el acceso a sistemas sensibles: IAM, roles, revisiones periódicas, 
-principio de menor privilegio.]
+El sistema GRLOG registra de forma autom\'atica todos los eventos de viajes, alertas y ocurrencias
+asociadas al monitoreo de flotas, lo que constituye una traza operacional completa de cada ruta
+gestionada. Esta trazabilidad es fundamental para la generaci\'on de reportes a clientes y para
+la auditor\'ia de eventos de riesgo. La plataforma de automatizaciones desarrollada internamente
+tambi\'en mantiene registros de las transformaciones y cargas de datos realizadas mediante la
+API de OpenAI y la integraci\'on SOAP con GRLOG.
 
-\subsubsection*{P22. Medidas de protección contra ciberataques}
-[Listar controles implementados: firewalls, IDS/IPS, cifrado en tránsito y reposo, 
-segmentación de redes, etc.]
+\subsubsection*{P19. Datos sensibles o confidenciales y su protecci\'on}
 
-\subsubsection*{P23. Controles para dispositivos móviles y BYOD}
-[Indicar políticas y herramientas de MDM (Mobile Device Management) o restricciones 
-para el uso de dispositivos personales en la red corporativa.]
+Los datos m\'as sensibles que maneja la empresa incluyen: coordenadas GPS en tiempo real de
+flotas de clientes, rutas y destinos de cargas, informaci\'on de clientes corporativos
+(Mondelez, San Jos\'e, entre otros) y datos operacionales de viajes. Estos datos son
+procesados por GRLOG y la plataforma interna, y transmitidos a trav\'es de la API SOAP.
+La protecci\'on de estos datos recae principalmente en la capa de seguridad provista por
+AWS y por los controles propios del proveedor GRLOG.
 
-\subsubsection*{P24. Gestión de vulnerabilidades en el software}
-[Describir los procesos de gestión de parches, escaneo de vulnerabilidades y 
-respuesta ante CVEs críticos.]
+\subsubsection*{P20. Pol\'iticas de respaldo y recuperaci\'on ante desastres}
 
-\subsubsection*{P25. Entrenamiento y concientización en seguridad de empleados}
-[Indicar si existen programas de capacitación, simulaciones de phishing u otras 
-iniciativas de cultura de seguridad.]
+La empresa cuenta con respaldos internacionales de bases de datos como principal mecanismo
+de continuidad de datos. Estos respaldos permiten recuperar la informaci\'on en caso de
+fallas del sistema. Sin embargo, no existe una pol\'itica formalmente documentada de backup
+con par\'ametros definidos de frecuencia, retenci\'on, ubicaci\'on de los respaldos o
+procedimientos de prueba de restauraci\'on. Este es un aspecto que requiere mayor
+formalizaci\'on, especialmente ante la proyecci\'on de crecimiento internacional de la empresa.
+
+\subsubsection*{P21. Gesti\'on de accesos y privilegios a sistemas cr\'iticos}
+
+El acceso a los sistemas cr\'iticos se gestiona de forma centralizada a trav\'es de los
+mecanismos de IAM provistos por AWS y los controles de acceso propios de GRLOG y las
+plataformas internas. La asignaci\'on de roles y permisos es administrada por el Coordinador
+de TI. No se han identificado revisiones peri\'odicas formales de privilegios ni un proceso
+documentado de gesti\'on del ciclo de vida de cuentas de usuario, lo que constituye un
+\'area de mejora bajo el principio de menor privilegio.
+
+\subsubsection*{P22. Medidas de protecci\'on contra ciberataques}
+
+La protecci\'on contra ciberataques es provista principalmente por la infraestructura de
+\textbf{Amazon Web Services}, que incluye controles como grupos de seguridad (firewall virtual),
+cifrado en tr\'ansito y en reposo, y servicios de detecci\'on de amenazas. Adicionalmente,
+la empresa cuenta con \textbf{CyberArmor} como consultora externa que apoya en aspectos de
+seguridad de software. El uso de HTTPS para las comunicaciones web y la integraci\'on mediante
+API SOAP con GRLOG son pr\'acticas que contribuyen a la seguridad de las transmisiones de datos.
+
+\subsubsection*{P23. Controles para dispositivos m\'oviles y BYOD}
+
+No se identificaron pol\'iticas formales de gesti\'on de dispositivos m\'oviles ni un esquema
+de BYOD (Bring Your Own Device) documentado en la empresa. Dado el tama\~no de la organizaci\'on
+y su modalidad de trabajo h\'ibrida, es probable que exista un uso informal de dispositivos
+personales para acceder a sistemas de comunicaci\'on interna (correo electr\'onico, mensajer\'ia),
+sin controles espec\'ificos de MDM (Mobile Device Management). Este es un aspecto que deber\'ia
+formalizarse ante la posible expansi\'on del equipo y de las operaciones.
+
+\subsubsection*{P24. Gesti\'on de vulnerabilidades en el software}
+
+La gesti\'on de vulnerabilidades del software propio se apoya en el flujo de trabajo basado en
+ramas de GitHub, que incluye revisiones de c\'odigo (code review) previas a la integraci\'on
+de cambios en el repositorio principal. Esto reduce el riesgo de introducir vulnerabilidades
+en producci\'on. Los parches de seguridad de la infraestructura son responsabilidad de AWS en
+los servicios PaaS utilizados. Para los componentes externos como GRLOG, la gesti\'on de
+vulnerabilidades es responsabilidad del proveedor.
+
+\subsubsection*{P25. Entrenamiento y concientizaci\'on en seguridad de empleados}
+
+No se identificaron programas formales de capacitaci\'on en ciberseguridad para el personal
+de Rests. La concientizaci\'on en seguridad se da de manera informal dentro del equipo de TI,
+dada la naturaleza t\'ecnica de sus integrantes. Para el personal operacional (operadores de
+monitoreo), no se cuenta con un programa estructurado de entrenamiento en buenas pr\'acticas
+de seguridad de la informaci\'on. Esto representa un \'area de mejora especialmente relevante
+ante la expansi\'on internacional proyectada y el manejo de datos sensibles de clientes
+corporativos.
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   PARTE III: RECURSOS Y OPERACIÓN ACTUAL
+%   PARTE III
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Parte III: Recursos y Operación Actual}
+\section{Parte III: Recursos y Operaci\'on Actual}
 
-%-------------------------------------------------
-\subsection{Infraestructura y Tecnología Actual}
-%-------------------------------------------------
+\subsection{Infraestructura y Tecnolog\'ia Actual}
 
-\subsubsection*{P26. Tecnologías actuales en uso (hardware, software, redes)}
-[Describir el stack tecnológico actual: servidores, sistemas operativos, bases de datos, 
-lenguajes de programación, plataformas de red, etc.]
+\subsubsection*{P26. Tecnolog\'ias actuales en uso (hardware, software, redes)}
 
-\subsubsection*{P27. Arquitectura tecnológica actual}
-[Indicar si la arquitectura es monolítica, de microservicios, cliente-servidor, N-capas, 
-híbrida u otra. Justificar brevemente.]
+El stack tecnol\'ogico principal de las aplicaciones desarrolladas internamente comprende:
+\textbf{Node.js} y \textbf{Express} en el backend, \textbf{Next.js} en el frontend,
+\textbf{MongoDB} como base de datos (contratada como PaaS), y \textbf{GitHub} para el
+control de versiones con flujo de trabajo basado en ramas. Para la automatizaci\'on de
+viajes, se integra la \textbf{API de OpenAI} (modelo GPT-5 nano) para la transformaci\'on
+de datos. La comunicaci\'on con el sistema de monitoreo GRLOG se realiza mediante una
+\textbf{API SOAP} con intercambio de mensajes en formato XML. Los reportes anal\'iticos
+se generan mediante \textbf{Power BI}. La infraestructura de nube est\'a basada en
+\textbf{Amazon Web Services (AWS)}.
 
-\subsubsection*{P28. Uso de servicios en la nube, en sitio o híbridos}
-[Especificar qué modelo de despliegue se utiliza, para qué servicios o productos y 
-los criterios que llevaron a esa decisión.]
+\subsubsection*{P27. Arquitectura tecnol\'ogica actual}
+
+Las aplicaciones desarrolladas internamente (plataforma de automatizaciones y sistema de
+monitoreo integrado) siguen una arquitectura de \textbf{monolito modular con dise\~no
+hexagonal}. Este enfoque organiza el sistema en m\'odulos con responsabilidades claramente
+delimitadas, mientras que la arquitectura hexagonal (puertos y adaptadores) permite desacoplar
+la l\'ogica de negocio de los detalles de infraestructura (base de datos, APIs externas),
+facilitando la prueba y el reemplazo de componentes. El sistema GRLOG es una plataforma
+SaaS externa cuya arquitectura interna no es conocida por la empresa.
+
+\subsubsection*{P28. Uso de servicios en la nube, en sitio o h\'ibridos}
+
+La empresa opera bajo un modelo predominantemente en \textbf{nube}, utilizando servicios
+PaaS de AWS para el despliegue de sus aplicaciones y MongoDB en la nube para la base de
+datos. GRLOG y el SaaS web tambi\'en son servicios en la nube contratados por suscripci\'on.
+Esta decisi\'on responde a criterios de costo (eliminar inversi\'on en hardware propio),
+escalabilidad (ajustar capacidad seg\'un demanda) y seguridad (delegar parte de los controles
+al proveedor de nube). No existe infraestructura on-premise significativa en la empresa.
 
 \subsubsection*{P29. Sistemas heredados (\textit{legacy}) que deben mantenerse o migrarse}
-[Identificar sistemas críticos de larga data que representen deuda técnica o restricciones 
-para la evolución tecnológica.]
 
-\subsubsection*{P30. Niveles de automatización y monitoreo de la infraestructura}
-[Describir las herramientas de monitoreo (ej.: Zabbix, Datadog, CloudWatch), alertas 
-y nivel de automatización operacional existente.]
+El principal sistema con caracter\'isticas de legacy en t\'erminos de integraci\'on es
+\textbf{GRLOG}, que expone su interfaz a trav\'es de una \textbf{API SOAP} con mensajes
+XML, protocolo considerado antiguo en el contexto actual dominado por APIs REST y JSON.
+Esta limitaci\'on fue un desaf\'io significativo durante el desarrollo de la plataforma de
+automatizaciones, requiriendo la implementaci\'on de un flujo de transformaci\'on de datos
+espec\'ifico para mapear el formato interno al XML requerido por GRLOG. La dependencia de
+este protocolo limita la velocidad y flexibilidad de las integraciones futuras.
 
-\subsubsection*{P31. Plataformas tecnológicas externas integradas}
-[Listar integraciones con sistemas de terceros: ERPs, CRMs, pasarelas de pago, APIs 
-externas, etc.]
+\subsubsection*{P30. Niveles de automatizaci\'on y monitoreo de la infraestructura}
 
-\subsubsection*{P32. Gestión de actualizaciones de software y parches de seguridad}
-[Explicar el proceso y frecuencia de aplicación de actualizaciones y parches en los 
-distintos sistemas.]
+El nivel de automatizaci\'on operacional ha aumentado con el desarrollo de la plataforma
+de automatizaciones de viajes, que reemplaz\'o la carga manual mediante planillas Excel.
+El sistema de IA (GPT-5 nano) agrega automatizaci\'on en el tratamiento de alertas.
+Sin embargo, no se identificaron herramientas formales de monitoreo de infraestructura
+como Datadog, Zabbix o AWS CloudWatch configuradas con alertas sistem\'aticas. El monitoreo
+de la aplicaci\'on y la infraestructura no est\'a formalizado m\'as all\'a de los controles
+b\'asicos que provee AWS.
 
-\subsubsection*{P33. Tecnologías evaluadas para futuras implementaciones}
-[Indicar qué tecnologías o plataformas están siendo evaluadas o piloteadas para incorporar 
-próximamente.]
+\subsubsection*{P31. Plataformas tecnol\'ogicas externas integradas}
 
-%-------------------------------------------------
-\subsection{Talento, Gobernanza y Cultura Tecnológica}
-%-------------------------------------------------
+Las principales integraciones externas son: (1) \textbf{GRLOG} v\'ia API SOAP, sistema de
+monitoreo de viajes de origen brasile\~no que centraliza la operaci\'on de flotas; (2)
+\textbf{API de OpenAI} (GPT-5 nano) para transformaci\'on inteligente de datos en la
+plataforma de automatizaciones; (3) \textbf{Power BI} para la generaci\'on de reportes y
+an\'alisis de datos operacionales; y (4) servicios de \textbf{AWS} para la infraestructura
+de nube. Estas integraciones son cr\'iticas para la operaci\'on del negocio y representan
+dependencias externas que deben ser gestionadas mediante SLA y planes de contingencia.
 
-\subsubsection*{P34. Capacidades técnicas del equipo interno}
-[Describir el perfil del equipo de TI: tamaño, roles, competencias y nivel de especialización.]
+\subsubsection*{P32. Gesti\'on de actualizaciones de software y parches de seguridad}
+
+Las actualizaciones del software propio se gestionan mediante un flujo de trabajo basado
+en ramas de \textbf{GitHub}, con revisiones de c\'odigo previas a la integraci\'on en
+la rama principal. Las reuniones de planificaci\'on semanales permiten priorizar y
+coordinar los cambios. Los parches de seguridad de la infraestructura son responsabilidad
+de AWS en los servicios PaaS utilizados. No existe un proceso formal de gesti\'on de
+parches para todos los componentes, siendo este un aspecto a formalizar.
+
+\subsubsection*{P33. Tecnolog\'ias evaluadas para futuras implementaciones}
+
+Las tecnolog\'ias en evaluaci\'on o en fase de incorporaci\'on incluyen la
+\textbf{expansi\'on del uso de IA} m\'as all\'a de la transformaci\'on de datos (por ejemplo,
+an\'alisis predictivo de riesgos en rutas), el desarrollo de capacidades para el nuevo
+\textbf{servicio de gesti\'on de huella de carbono}, y la posible integraci\'on de
+sensores IoT adicionales al sistema de monitoreo para enriquecer los datos de viaje.
+Asimismo, se eval\'ua la posibilidad de desarrollar APIs REST propias que reemplacen
+la dependencia del protocolo SOAP de GRLOG en el mediano plazo.
+
+\subsection{Talento, Gobernanza y Cultura Tecnol\'ogica}
+
+\subsubsection*{P34. Capacidades t\'ecnicas del equipo interno}
+
+El equipo de TI est\'a compuesto por 15 profesionales distribuidos en los siguientes
+roles: 5 desarrolladores (backend y frontend con Node.js y Next.js), 4 analistas de datos
+(con competencias en Power BI y an\'alisis de datos log\'isticos), 3 analistas de QA,
+2 profesionales de soporte t\'ecnico, y 1 coordinador de TI. El equipo posee competencias
+en desarrollo web moderno, integraci\'on de APIs, prompt engineering, y an\'alisis de datos.
+La experiencia con protocolos como SOAP y la integraci\'on con sistemas externos como GRLOG
+representa un conocimiento especializado adquirido en el ejercicio de los proyectos.
 
 \subsubsection*{P35. Modelo de gobierno de TI}
-[Indicar si la gestión de TI es centralizada, federada, ágil u otro modelo, y cómo se 
-toman las decisiones tecnológicas.]
 
-\subsubsection*{P36. Cultura respecto a innovación y adopción de nuevas tecnologías}
-[Evaluar si la organización tiene una cultura proactiva o reactiva frente a la innovación 
-tecnológica.]
+El gobierno de TI es \textbf{centralizado}, liderado por Arquimedes Infante como Coordinador
+de TI, quien reporta directamente al CEO Sim\'on V\'asquez. Las decisiones tecnol\'ogicas se
+toman a nivel del coordinador en conjunto con el CEO, sin la aplicaci\'on de un marco de
+gobierno formal como COBIT o ITIL. No se aplican metodolog\'ias \'agiles espec\'ificas
+(como Scrum o Kanban) de manera formal; en cambio, se utilizan reuniones de planificaci\'on
+semanales y supervisi\'on diaria como mecanismo de coordinaci\'on del trabajo.
 
-\subsubsection*{P37. Externalización de servicios tecnológicos}
-[Indicar qué servicios se tercerizan, con qué proveedores y bajo qué criterios de selección.]
+\subsubsection*{P36. Cultura respecto a la innovaci\'on y adopci\'on de nuevas tecnolog\'ias}
 
-\subsubsection*{P38. Políticas de gestión del cambio y capacitación tecnológica}
-[Describir cómo se gestionan los cambios tecnológicos: change management, 
-capacitaciones y gestión del impacto en los usuarios.]
+La cultura tecnol\'ogica de Rests es \textbf{proactiva e innovadora}, evidenciada por la
+incorporaci\'on temprana de modelos de inteligencia artificial (GPT-5 nano de OpenAI) en
+sus procesos operacionales, antes de que su uso generalizado se masificara en el sector
+log\'istico chileno. Asimismo, el desarrollo de una plataforma de automatizaciones propia
+refleja una disposici\'on a invertir en soluci\'on tecnol\'ogica cuando el mercado no
+ofrece una respuesta adecuada. El equipo de TI muestra apertura al aprendizaje de nuevas
+tecnolog\'ias como parte de su din\'amica de trabajo habitual.
 
-\subsubsection*{P39. Medidas para evitar obsolescencia tecnológica}
-[Indicar si existen planes de renovación tecnológica, evaluaciones periódicas de plataformas 
-o políticas de ciclo de vida de sistemas.]
+\subsubsection*{P37. Externalizaci\'on de servicios tecnol\'ogicos}
 
-\subsubsection*{P40. Colaboración entre equipos de TI y el resto de la empresa}
-[Describir los mecanismos de coordinación entre TI y las áreas de negocio.]
+La empresa externaliza los siguientes servicios: (1) \textbf{GRLOG} como plataforma SaaS
+de monitoreo, contratada por suscripci\'on al proveedor brasile\~no; (2) \textbf{CyberArmor},
+consultora externa que provee servicios de desarrollo de software y apoyo en seguridad;
+(3) \textbf{OpenAI} como servicio de IA bajo modelo de pago por uso; y (4) \textbf{AWS}
+como proveedor de infraestructura en la nube. Los criterios de selecci\'on responden a la
+necesidad de acceder a capacidades especializadas que no est\'an disponibles internamente,
+optimizando costos bajo modelos OPEX en lugar de CAPEX.
 
-\subsubsection*{P41. Capacidades de liderazgo y toma de decisiones en el área tecnológica}
-[Caracterizar el rol del CIO/CTO u otros líderes TI y su influencia en la estrategia 
-organizacional.]
+\subsubsection*{P38. Pol\'iticas de gesti\'on del cambio y capacitaci\'on tecnol\'ogica}
 
-%-------------------------------------------------
+La gesti\'on del cambio se realiza de manera informal mediante la supervisi\'on directa
+del Coordinador de TI y las reuniones de planificaci\'on semanal, donde se definen,
+asignan y priorizan las tareas de desarrollo. La capacitaci\'on tecnol\'ogica ocurre
+principalmente de manera aut\'onoma por parte de los desarrolladores, complementada con
+orientaci\'on del coordinador cuando se incorporan nuevas tecnolog\'ias. No existe un
+programa formal de change management ni un proceso estructurado de capacitaci\'on continua.
+
+\subsubsection*{P39. Medidas para evitar la obsolescencia tecnol\'ogica}
+
+La principal medida adoptada para evitar la obsolescencia es el desarrollo continuo de la
+\textbf{plataforma de automatizaciones propia}, que busca modernizar la interacci\'on con
+GRLOG y reducir la dependencia de su interfaz SOAP mediante una capa de abstracci\'on
+interna. La adopci\'on de tecnolog\'ias modernas como Next.js, Node.js y la API de OpenAI
+refleja una orientaci\'on hacia herramientas vigentes y con amplia comunidad de soporte.
+Sin embargo, no existe un proceso formal de evaluaci\'on del ciclo de vida tecnol\'ogico.
+
+\subsubsection*{P40. Colaboraci\'on entre equipos de TI y el resto de la empresa}
+
+La coordinaci\'on entre TI y el \'area operacional (operadores de monitoreo) se realiza
+principalmente a trav\'es de un \textbf{sistema de tickets v\'ia correo electr\'onico},
+mediante el cual los operadores reportan incidencias t\'ecnicas o solicitudes de soporte.
+Las reuniones semanales de planificaci\'on incluyen retroalimentaci\'on del negocio sobre
+las prioridades tecnol\'ogicas. El Coordinador de TI act\'ua como puente entre las
+necesidades operacionales y las decisiones de desarrollo, facilitando la comunicaci\'on
+entre ambos equipos.
+
+\subsubsection*{P41. Capacidades de liderazgo y toma de decisiones en el \'area tecnol\'ogica}
+
+El liderazgo tecnol\'ogico recae en \textbf{Arquimedes Infante}, Coordinador de TI, quien
+centraliza las decisiones t\'ecnicas, la asignaci\'on de recursos del equipo y la
+priorizaci\'on de proyectos. Su relaci\'on directa con el CEO Sim\'on V\'asquez le otorga
+influencia en la estrategia tecnol\'ogica de la empresa. El modelo de liderazgo es directo
+y pragm\'atico, con un estilo de supervisi\'on cercano que facilita la agilidad en la
+toma de decisiones pero que podr\'ia representar un cuello de botella ante el crecimiento
+de la empresa.
+
 \subsection{Costos y ROI Esperado}
-%-------------------------------------------------
 
-\subsubsection*{P42. Presupuesto asignado a tecnología y porcentaje sobre ventas}
-[Indicar el presupuesto anual de TI y su proporción respecto a los ingresos de la empresa.]
+\subsubsection*{P42. Presupuesto asignado a tecnolog\'ia y porcentaje sobre ventas}
 
-\subsubsection*{P43. Evaluación del retorno de inversión (ROI) de proyectos tecnológicos}
-[Explicar la metodología utilizada para evaluar y justificar inversiones en tecnología.]
+La empresa no cuenta con un presupuesto fijo anual asignado al \'area de TI. Los gastos
+tecnol\'ogicos se aprueban y ejecutan \textbf{por proyecto}, en funci\'on de las ganancias
+generadas y las necesidades espec\'ificas de cada iniciativa. Esta modalidad refleja una
+gesti\'on financiera flexible pero con menor predictibilidad para la planificaci\'on de
+largo plazo. El porcentaje exacto del gasto en TI respecto a los ingresos totales no fue
+informado.
 
-\subsubsection*{P44. Restricciones económicas a corto, mediano y largo plazo}
-[Describir limitaciones presupuestarias que condicionan las decisiones tecnológicas.]
+\subsubsection*{P43. Evaluaci\'on del retorno de inversi\'on (ROI) de proyectos tecnol\'ogicos}
+
+El criterio principal de evaluaci\'on de proyectos tecnol\'ogicos es la \textbf{rentabilidad
+m\'inima del 30\% de ganancia} por proyecto. Todo proyecto debe demostrar que genera al menos
+ese margen para ser aprobado y ejecutado. Esta m\'etrica es simple y directa, alineada con
+el modelo de negocio de una empresa de tama\~no mediano donde el retorno tangible es el
+principal justificador de inversiones tecnol\'ogicas.
+
+\subsubsection*{P44. Restricciones econ\'omicas a corto, mediano y largo plazo}
+
+A corto plazo, la principal restricci\'on es la ausencia de un presupuesto de TI predefinido,
+lo que puede dificultar la planificaci\'on de inversiones tecnol\'ogicas importantes. A
+mediano plazo, el crecimiento internacional implicar\'a mayores costos de infraestructura,
+licencias y posiblemente contrataci\'on de personal. A largo plazo, la dependencia de
+servicios SaaS y APIs externas con modelos de pago por uso (como OpenAI) puede generar
+costos variables significativos si el volumen de transacciones escala considerablemente.
 
 \subsubsection*{P45. Modelos de pago por uso o suscripciones para infraestructura y software}
-[Indicar si la empresa utiliza o contempla modelos OPEX (cloud, SaaS, licencias por 
-suscripción) en lugar de CAPEX.]
 
-\subsubsection*{P46. Costos adicionales anticipados por adopción de nuevas tecnologías}
-[Estimar los costos de migración, capacitación, licenciamiento y operación asociados 
-a la transformación tecnológica proyectada.]
+La empresa utiliza modelos OPEX en lugar de CAPEX para su tecnolog\'ia: \textbf{OpenAI}
+bajo pago por uso (tokens consumidos por llamadas al API), y \textbf{GRLOG} y el SaaS
+web bajo suscripci\'on mensual. AWS tambi\'en opera bajo un modelo de pago por consumo.
+Esta estrategia reduce la inversi\'on inicial y permite ajustar los gastos seg\'un el
+volumen de operaciones, lo cual es conveniente en una empresa en etapa de crecimiento.
 
-\subsubsection*{P47. Gestión de costos operativos y de mantenimiento de la infraestructura}
-[Describir cómo se controlan y optimizan los costos de operación y mantenimiento TI.]
+\subsubsection*{P46. Costos adicionales anticipados por adopci\'on de nuevas tecnolog\'ias}
+
+Los principales costos adicionales anticipados incluyen: el escalamiento de los costos
+de la \textbf{API de OpenAI} ante mayor volumen de viajes procesados, posibles incrementos
+en el costo de los servicios de \textbf{AWS} ante expansi\'on de la infraestructura,
+y el desarrollo del nuevo servicio de \textbf{huella de carbono} que requerir\'a tiempo
+de ingenieria y posiblemente nuevas integraciones o licencias de datos ambientales.
+
+\subsubsection*{P47. Gesti\'on de costos operativos y de mantenimiento de la infraestructura}
+
+Los costos operativos se mantienen bajos gracias al modelo cloud-native de la empresa,
+que elimina gastos de hardware propio, licencias de sistemas operativos y mantenimiento
+f\'isico de servidores. El uso de servicios administrados (PaaS y SaaS) transfiere gran
+parte de la responsabilidad de mantenimiento a los proveedores. Sin embargo, no existe
+un proceso formal de optimizaci\'on de costos en la nube (cloud cost management), lo
+que podr\'ia ser relevante a medida que la infraestructura crezca.
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   PARTE IV: REQUERIMIENTOS EXTERNOS
+%   PARTE IV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Parte IV: Requerimientos Externos}
 
-%-------------------------------------------------
 \subsection{Requerimientos de Terceras Partes (Proveedores y Socios)}
-%-------------------------------------------------
 
-\subsubsection*{P48. Proveedores externos críticos para el negocio}
-[Identificar los proveedores de software, infraestructura y servicios de los que depende 
-críticamente la operación de la empresa.]
+\subsubsection*{P48. Proveedores externos cr\'iticos para el negocio}
 
-\subsubsection*{P49. Gestión de contratos y SLA con proveedores}
-[Describir cómo se formalizan, monitorean y renuevan los contratos y acuerdos de nivel 
-de servicio con terceros.]
+Los proveedores cr\'iticos identificados son: (1) \textbf{GRLOG}, plataforma SaaS brasile\~na
+de monitoreo de viajes que sustenta el servicio central de la empresa; (2) \textbf{CyberArmor},
+consultora que provee desarrollo de software y apoyo en seguridad; (3) \textbf{OpenAI},
+proveedor de la API de inteligencia artificial utilizada en la plataforma de automatizaciones;
+(4) \textbf{Amazon Web Services (AWS)}, proveedor de infraestructura cloud; y (5) \textbf{MongoDB}
+como servicio de base de datos en la nube. Entre estos, GRLOG representa el proveedor de
+mayor criticidad operacional.
+
+\subsubsection*{P49. Gesti\'on de contratos y SLA con proveedores}
+
+La empresa mantiene \textbf{SLA formales con GRLOG y CyberArmor}, que incluyen compromisos
+de soporte ante fallos o interrupciones del servicio. Estos acuerdos garantizan que, ante
+una incidencia, el proveedor est\'a obligado a dar respuesta y soporte dentro de los tiempos
+estipulados. Los contratos con AWS y OpenAI son contratos est\'andar de servicio en la nube,
+sujetos a los t\'erminos y condiciones p\'ublicos de cada proveedor, sin SLA personalizados
+negociados.
 
 \subsubsection*{P50. Requisitos de seguridad, confidencialidad y cumplimiento exigidos a terceros}
-[Indicar qué exigencias normativas o contractuales se imponen a los proveedores en 
-materia de seguridad de información.]
+
+Los requisitos de seguridad exigidos a terceros se apoyan principalmente en los controles
+que cada proveedor implementa por defecto: AWS provee certificaciones de seguridad (SOC 2,
+ISO 27001) y cumplimiento con regulaciones internacionales; GRLOG gestiona sus propios
+controles de seguridad como sistema brasile\~no sujeto a la LGPD. No se ha identificado
+un proceso formal de exigencia de requisitos de seguridad espec\'ificos a cada proveedor
+m\'as all\'a de los compromisos contractuales de los SLA.
 
 \subsubsection*{P51. Dependencias de terceros para la continuidad del negocio}
-[Identificar qué servicios o componentes de la infraestructura dependen de terceros 
-y representan un riesgo de continuidad.]
 
-\subsubsection*{P52. Procesos de validación de proveedores}
-[Explicar cómo se evalúa y certifica que los proveedores cumplen estándares de calidad, 
-seguridad y continuidad (ej.: auditorías, certificaciones ISO, cuestionarios de seguridad).]
+La dependencia m\'as cr\'itica para la continuidad del negocio es \textbf{GRLOG}: si este
+sistema experimenta una ca\'ida, el servicio de monitoreo de flotas 24/7 se ve directamente
+afectado, impactando a todos los clientes de Rests. La segunda dependencia relevante es la
+\textbf{API de OpenAI}; si no est\'a disponible, la plataforma de automatizaciones pierde
+su capacidad de procesamiento inteligente de datos. AWS es tambi\'en cr\'itico como capa
+de infraestructura, aunque su alto nivel de disponibilidad reduce este riesgo.
 
-\subsubsection*{P53. Integraciones de sistemas con terceros y garantías de compatibilidad y seguridad}
-[Describir las integraciones existentes (APIs, EDI, webhooks, etc.) y los controles 
-implementados para asegurar su seguridad y estabilidad.]
+\subsubsection*{P52. Procesos de validaci\'on de proveedores}
 
-\subsubsection*{P54. Medidas para gestionar riesgos relacionados con proveedores críticos}
-[Indicar estrategias de mitigación ante fallas de proveedores: proveedores alternativos, 
-cláusulas contractuales, planes de contingencia.]
+La validaci\'on de proveedores se realiza principalmente a trav\'es de los \textbf{contratos
+y SLA formales} establecidos con GRLOG y CyberArmor, que definen responsabilidades y
+compromisos de calidad de servicio. No se ha identificado un proceso formal de auditor\'ia
+de proveedores, evaluaci\'on de certificaciones ISO o cuestionarios de seguridad previos
+a la contrataci\'on. La selecci\'on de proveedores se ha basado en la reputaci\'on del
+servicio y la capacidad de cumplir con los requerimientos operacionales de la empresa.
 
-%-------------------------------------------------
-\subsection{Continuidad del Negocio y Gestión de Crisis}
-%-------------------------------------------------
+\subsubsection*{P53. Integraciones de sistemas con terceros y garant\'ias de compatibilidad y seguridad}
 
-\subsubsection*{P55. Planes de continuidad del negocio y su integración con TI}
-[Describir si existe un Plan de Continuidad del Negocio (BCP) formal y cómo se articula 
-con la infraestructura tecnológica.]
+La integraci\'on principal con terceros es la \textbf{API SOAP de GRLOG}, que requiere el
+mapeo de datos al formato XML espec\'ifico del sistema. La seguridad de esta integraci\'on
+se gestiona mediante los controles de acceso propios de GRLOG y la infraestructura de AWS.
+La \textbf{API REST de OpenAI} se integra bajo el protocolo HTTPS con autenticaci\'on
+mediante clave de API. El repositorio de c\'odigo en \textbf{GitHub} utiliza el modelo de
+ramas con revisi\'on de c\'odigo para garantizar la integridad de las integraciones antes
+de su despliegue en producci\'on.
 
-\subsubsection*{P56. Procesos definidos para recuperación ante desastres tecnológicos}
-[Detallar el Plan de Recuperación ante Desastres (DRP): procedimientos, responsables 
-y sistemas cubiertos.]
+\subsubsection*{P54. Medidas para gestionar riesgos relacionados con proveedores cr\'iticos}
 
-\subsubsection*{P57. MTPoD, DRT y RTO para sistemas críticos}
-[Indicar los parámetros de continuidad definidos: tiempo máximo tolerable de interrupción 
-(MTPoD), tiempo deseado de recuperación (DRT) y objetivo de tiempo de recuperación (RTO).]
+El principal mecanismo de mitigaci\'on ante fallas de proveedores es la existencia de
+\textbf{SLA formales con GRLOG y CyberArmor}, que obligan al proveedor a ofrecer soporte
+ante interrupciones. Los \textbf{respaldos internacionales de bases de datos} constituyen
+una medida de contingencia ante p\'erdida de datos. Sin embargo, no existen planes de
+contingencia formales que definan qu\'e hacer si GRLOG no est\'a disponible por un per\'iodo
+prolongado, ni proveedores alternativos identificados para reemplazarlo en caso necesario.
 
-% Tabla de parámetros de continuidad
+\subsection{Continuidad del Negocio y Gesti\'on de Crisis}
+
+\subsubsection*{P55. Planes de continuidad del negocio y su integraci\'on con TI}
+
+La empresa no cuenta con un \textbf{Plan de Continuidad del Negocio (BCP) formalmente
+documentado}. La principal medida de continuidad identificada es la existencia de respaldos
+internacionales de bases de datos, que permiten recuperar la informaci\'on ante fallas de
+los sistemas. El servicio 24/7 es sostenido por turnos de operadores, lo que garantiza
+presencia humana continua, pero no existe un protocolo formal de respuesta ante escenarios
+de crisis tecnol\'ogica que defina roles, pasos y tiempos de recuperaci\'on.
+
+\subsubsection*{P56. Procesos definidos para la recuperaci\'on ante desastres tecnol\'ogicos}
+
+No se ha identificado un \textbf{Plan de Recuperaci\'on ante Desastres (DRP)} formalmente
+documentado. Ante una falla de los sistemas cr\'iticos, la respuesta depende del soporte
+provisto por los proveedores (GRLOG, AWS) seg\'un los SLA vigentes, y de la capacidad del
+equipo de TI liderado por Arquimedes Infante para restaurar el servicio. Los respaldos de
+base de datos internacionales son el mecanismo de recuperaci\'on de datos m\'as concreto
+identificado.
+
+\subsubsection*{P57. MTPoD, DRT y RTO para sistemas cr\'iticos}
+
+No existen par\'ametros formalmente definidos de continuidad operativa. A partir del
+contexto del negocio, se puede inferir que el tiempo m\'aximo tolerable de interrupci\'on
+(MTPoD) para el servicio de monitoreo 24/7 deber\'ia ser m\'inimo, dado que cualquier
+ca\'ida impacta directamente la seguridad de las flotas de los clientes.
+
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{>{\bfseries}l >{\centering\arraybackslash}p{2cm} X}
+\begin{tabularx}{\textwidth}{>{\bfseries}l >{\centering\arraybackslash}p{3cm} X}
 \toprule
 \rowcolor{headerblue}
-\textcolor{white}{\textbf{Parámetro}} & 
-\textcolor{white}{\textbf{Valor}} & 
-\textcolor{white}{\textbf{Descripción}} \\
+\textcolor{white}{\textbf{Par\'ametro}} &
+\textcolor{white}{\textbf{Valor definido}} &
+\textcolor{white}{\textbf{Descripci\'on}} \\
 \midrule
-MTPoD & \ph{HH:MM} & Tiempo máximo tolerable de interrupción \\
+MTPoD & No definido formalmente & Tiempo m\'aximo tolerable de interrupci\'on \\
 \rowcolor{rowgray}
-DRT   & \ph{HH:MM} & Tiempo deseado de recuperación a operación mínima \\
-MBCO  & \ph{\%}    & Nivel mínimo de servicio aceptable durante la contingencia \\
+DRT   & No definido formalmente & Tiempo deseado de recuperaci\'on a operaci\'on m\'inima \\
+MBCO  & No definido formalmente & Nivel m\'inimo de servicio aceptable durante la contingencia \\
 \rowcolor{rowgray}
-MTA   & \ph{HH:MM} & Tiempo máximo de validez de la operación alternativa \\
-RTO   & \ph{HH:MM} & Objetivo de tiempo de recuperación a operación normal \\
+MTA   & No definido formalmente & Tiempo m\'aximo de validez de la operaci\'on alternativa \\
+RTO   & No definido formalmente & Objetivo de tiempo de recuperaci\'on a operaci\'on normal \\
 \bottomrule
 \end{tabularx}
-\caption{Parámetros de continuidad operativa definidos por la empresa (ISO 22301).}
+\caption{Par\'ametros de continuidad operativa (ISO 22301): estado actual en R RESTS GROUP SPA.}
 \end{table}
 
-\subsubsection*{P58. Pruebas y simulacros de continuidad realizados periódicamente}
-[Indicar con qué frecuencia se realizan ejercicios de continuidad, qué escenarios se 
-simulan y qué resultados han arrojado.]
+\subsubsection*{P58. Pruebas y simulacros de continuidad realizados peri\'odicamente}
+
+La empresa \textbf{no realiza simulacros ni pruebas formales de continuidad}. No existe
+un calendario de ejercicios que valide la capacidad de recuperaci\'on ante escenarios
+de falla. Esta es una brecha significativa, especialmente considerando la criticidad del
+servicio de monitoreo 24/7 y la proyecci\'on de crecimiento internacional de la empresa,
+donde las expectativas de los clientes respecto a la continuidad del servicio ser\'an
+progresivamente m\'as exigentes.
 
 \subsubsection*{P59. Disponibilidad continua de servicios ante fallos imprevistos}
-[Describir las estrategias implementadas para mantener la operación ante fallas 
-no planificadas.]
 
-\subsubsection*{P60. Estrategia de redundancia y recuperación geográfica}
-[Indicar si existe redundancia geográfica (multi-zona, multi-región) y cómo se 
-gestiona una falla regional.]
+La disponibilidad continua del servicio se apoya en la \textbf{infraestructura de AWS},
+que provee alta disponibilidad a nivel de nube, y en la presencia de operadores durante
+las 24 horas del d\'ia. Ante fallos imprevistos del software, la respuesta depende del
+equipo de TI y del soporte de los proveedores. No existen mecanismos automatizados de
+failover definidos para todos los componentes cr\'iticos del sistema.
+
+\subsubsection*{P60. Estrategia de redundancia y recuperaci\'on geogr\'afica}
+
+La empresa cuenta con \textbf{respaldos internacionales de bases de datos} como \'unica
+medida de redundancia geogr\'afica identificada. No se ha definido una estrategia formal
+de recuperaci\'on geogr\'afica que incluya zonas de disponibilidad m\'ultiples, replicaci\'on
+activa-activa o despliegue multi-regi\'on en AWS. Dado que GRLOG opera desde Brasil y
+los datos se respaldan internacionalmente, existe cierta distribuci\'on geogr\'afica
+impl\'icita, pero sin un dise\~no expl\'icito de resiliencia regional.
 
 \subsubsection*{P61. Herramientas de monitoreo y alerta para detectar incidentes}
-[Listar las plataformas de monitoreo utilizadas y los umbrales de alerta configurados 
-para sistemas críticos.]
 
-\subsubsection*{P62. Capacidades de recuperación de datos y aplicaciones a nivel de infraestructura}
-[Describir las capacidades de backup, restauración y failover disponibles para los 
-sistemas más críticos.]
+El monitoreo operacional de flotas se realiza a trav\'es de \textbf{GRLOG}, que genera
+alertas en tiempo real sobre eventos cr\'iticos de los viajes. El sistema de IA basado
+en GPT-5 nano apoya el tratamiento autom\'atico de estas alertas. Para el monitoreo
+de la infraestructura tecnol\'ogica propia (servidores, aplicaciones), no se ha
+identificado el uso de herramientas especializadas como Datadog o AWS CloudWatch con
+alertas configuradas sistem\'aticamente.
 
-%-------------------------------------------------
-\subsection{Niveles de Servicio y Soporte Informático}
-%-------------------------------------------------
+\subsubsection*{P62. Capacidades de recuperaci\'on de datos y aplicaciones a nivel de infraestructura}
 
-\subsubsection*{P63. Tiempo de respuesta estándar para incidentes tecnológicos críticos}
-[Indicar los tiempos de primera respuesta y resolución definidos para incidentes de 
-alta criticidad.]
+La principal capacidad de recuperaci\'on de datos identificada son los \textbf{respaldos
+internacionales de bases de datos}, que permiten restaurar la informaci\'on en caso de
+falla. Para la recuperaci\'on de aplicaciones, el c\'odigo fuente est\'a gestionado en
+\textbf{GitHub}, lo que permite desplegar nuevamente las aplicaciones desde el repositorio.
+Sin embargo, no existen procedimientos documentados de recuperaci\'on ni tiempos de
+restauraci\'on medidos o validados mediante pruebas.
 
-\subsubsection*{P64. SLA para distintas plataformas y servicios tecnológicos}
-[Describir los niveles de servicio formalizados para los principales sistemas de la empresa.]
+\subsection{Niveles de Servicio y Soporte Inform\'atico}
 
-\subsubsection*{P65. Gestión de solicitudes y tickets de soporte técnico}
-[Explicar la herramienta y el proceso utilizado para recibir, clasificar y resolver 
-solicitudes de soporte.]
+\subsubsection*{P63. Tiempo de respuesta est\'andar para incidentes tecnol\'ogicos cr\'iticos}
 
-\subsubsection*{P66. Proceso de escalamiento de problemas dentro del soporte técnico}
-[Describir los niveles de escalamiento (N1, N2, N3) y los criterios para activar cada uno.]
+No existen tiempos de respuesta formalmente definidos para incidentes tecnol\'ogicos internos.
+Sin embargo, dado que el servicio de monitoreo es 24/7, el equipo de soporte de TI brinda
+atenci\'on continua. Los incidentes se reportan v\'ia correo electr\'onico, lo que puede
+generar demoras en la detecci\'on y respuesta respecto a sistemas de alerta autom\'atica.
+El soporte de los proveedores cr\'iticos (GRLOG, CyberArmor) est\'a definido por los SLA
+vigentes.
 
-\subsubsection*{P67. Herramientas o plataformas de gestión de incidencias y soporte}
-[Listar las plataformas ITSM utilizadas (ej.: ServiceNow, Jira Service Management, 
-Freshdesk) y sus funcionalidades principales.]
+\subsubsection*{P64. SLA para distintas plataformas y servicios tecnol\'ogicos}
+
+Los SLA formalmente definidos corresponden a los contratos con \textbf{GRLOG} y
+\textbf{CyberArmor}. Para los sistemas internos desarrollados por el equipo de TI,
+no existen SLA documentados que definan niveles de disponibilidad, tiempos de respuesta
+o criterios de escalamiento. AWS y OpenAI operan bajo sus t\'erminos est\'andar de
+servicio p\'ublicos, que incluyen compromisos de disponibilidad de infraestructura pero
+no SLA espec\'ificos para el uso de la empresa.
+
+\subsubsection*{P65. Gesti\'on de solicitudes y tickets de soporte t\'ecnico}
+
+El soporte t\'ecnico interno se gestiona mediante un \textbf{sistema de tickets v\'ia correo
+electr\'onico}. Los operadores y usuarios internos env\'ian sus solicitudes o reportes de
+incidencia al equipo de TI por esta v\'ia. No se utiliza una plataforma ITSM dedicada
+(como ServiceNow, Jira Service Management o Freshdesk). Este modelo es funcional para
+el tama\~no actual de la empresa, pero puede presentar limitaciones de trazabilidad y
+priorizaci\'on ante el crecimiento de la organizaci\'on.
+
+\subsubsection*{P66. Proceso de escalamiento de problemas dentro del soporte t\'ecnico}
+
+El proceso de escalamiento es informal y centralizado: los incidentes que no pueden ser
+resueltos por el equipo de soporte (primer nivel) se escalan directamente a
+\textbf{Arquimedes Infante}, Coordinador de TI, quien determina si el problema requiere
+intervenci\'on de un desarrollador interno o del soporte externo de los proveedores
+(GRLOG o CyberArmor). No existen niveles de escalamiento formalmente definidos (N1, N2, N3)
+con criterios documentados.
+
+\subsubsection*{P67. Herramientas o plataformas de gesti\'on de incidencias y soporte}
+
+La \'unica herramienta de gesti\'on de incidencias identificada es el \textbf{correo
+electr\'onico} como canal de recepci\'on de tickets. No se utiliza ning\'una plataforma
+ITSM especializada. GitHub se utiliza para la gesti\'on de incidencias relacionadas con
+el c\'odigo (bugs, pull requests, issues), pero no como herramienta de soporte al usuario
+final. Esta brecha en herramientas de soporte representa un \'area de mejora relevante.
 
 \subsubsection*{P68. Acuerdos con proveedores de soporte fuera del horario laboral}
-[Indicar si existe soporte 24/7 o acuerdos de on-call con proveedores para atender 
-incidentes fuera de horario.]
 
-\subsubsection*{P69. Medición del desempeño del soporte técnico}
-[Describir las métricas utilizadas para evaluar la calidad del soporte: MTTR, MTTD, 
-satisfacción del usuario interno, etc.]
+La empresa ofrece \textbf{soporte 24/7} a sus propios clientes, lo que implica que el
+equipo de operadores y TI mantiene disponibilidad continua. Los proveedores cr\'iticos
+(GRLOG y CyberArmor) cuentan con acuerdos de soporte definidos en sus SLA que cubren
+incidencias fuera del horario laboral habitual, garantizando respuesta ante fallos en
+cualquier momento del d\'ia.
 
-\subsubsection*{P70. Protocolos de comunicación con soporte de terceros ante incidentes críticos}
-[Indicar los canales y procedimientos formales para escalar incidentes a proveedores externos.]
+\subsubsection*{P69. Medici\'on del desempe\~no del soporte t\'ecnico}
 
-\subsubsection*{P71. Nivel de accesibilidad y cobertura del soporte técnico durante emergencias}
-[Describir la cobertura del soporte (horario, idioma, canales) y cómo se garantiza 
-la atención en situaciones de emergencia.]
+\textbf{No existen indicadores formales} para medir el desempe\~no del soporte t\'ecnico
+interno. No se calcula MTTD (tiempo medio de detecci\'on), MTTR (tiempo medio de
+resoluci\'on) ni se realizan encuestas de satisfacci\'on del usuario interno. La evaluaci\'on
+del soporte es cualitativa e informal, basada en la percepci\'on del Coordinador de TI
+y del equipo. La formalizaci\'on de KPIs de soporte es una necesidad identificada para
+la madurez operacional de la empresa.
+
+\subsubsection*{P70. Protocolos de comunicaci\'on con soporte de terceros ante incidentes cr\'iticos}
+
+La comunicaci\'on con el soporte de proveedores cr\'iticos ante incidentes se realiza
+a trav\'es de los \textbf{canales definidos en los SLA de GRLOG y CyberArmor}, que
+incluyen contacto directo con los equipos de soporte de cada proveedor. No existe un
+protocolo interno documentado que defina los pasos a seguir ante la falla de un
+proveedor cr\'itico, incluyendo tiempos de espera antes de escalar o alternativas
+de operaci\'on durante la interrupci\'on.
+
+\subsubsection*{P71. Nivel de accesibilidad y cobertura del soporte t\'ecnico durante emergencias}
+
+El soporte t\'ecnico interno cuenta con cobertura \textbf{24/7}, alineada con la naturaleza
+continua del servicio de monitoreo de flotas. Ante emergencias tecnol\'ogicas, el equipo de
+TI puede ser contactado a trav\'es del correo electr\'onico y canales de comunicaci\'on
+interna. Sin embargo, la ausencia de un sistema de alertas autom\'aticas puede retrasar la
+detecci\'on de incidentes cr\'iticos fuera del horario de mayor actividad del equipo.
 
 \subsubsection*{P72. Medidas para evitar problemas recurrentes en los sistemas de soporte}
-[Indicar si existe un proceso de gestión de problemas (problem management) para 
-identificar y eliminar causas raíz de incidentes repetitivos.]
 
-\subsubsection*{P73. KPIs utilizados para evaluar la efectividad del soporte informático}
-[Listar los indicadores clave de desempeño definidos para el área de soporte TI.]
+No se ha identificado un proceso formal de \textbf{gesti\'on de problemas} (problem management)
+orientado a identificar y eliminar las causas ra\'iz de incidentes repetitivos. Los problemas
+recurrentes se abordan de manera reactiva cuando se presentan. El proceso de revisi\'on de
+c\'odigo en GitHub contribuye a reducir la introducci\'on de defectos en el software, pero
+no existe un registro sistem\'atico de incidentes que permita identificar patrones de fallas
+frecuentes.
 
-% Tabla KPIs de soporte
+\subsubsection*{P73. KPIs utilizados para evaluar la efectividad del soporte inform\'atico}
+
+Actualmente la empresa \textbf{no utiliza KPIs formales} para evaluar la efectividad del
+soporte inform\'atico. La siguiente tabla refleja los indicadores que ser\'ia recomendable
+implementar, identificados como brechas en la madurez operacional actual de Rests:
+
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{>{\bfseries}l X >{\centering\arraybackslash}p{2.8cm}}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X >{\centering\arraybackslash}p{3.2cm}}
 \toprule
 \rowcolor{headerblue}
-\textcolor{white}{\textbf{KPI}} & 
-\textcolor{white}{\textbf{Descripción}} & 
-\textcolor{white}{\textbf{Valor actual / Meta}} \\
+\textcolor{white}{\textbf{KPI}} &
+\textcolor{white}{\textbf{Descripci\'on}} &
+\textcolor{white}{\textbf{Estado actual}} \\
 \midrule
-MTTD & Tiempo medio de detección de incidentes & \ph{Valor} \\
+MTTD & Tiempo medio de detecci\'on de incidentes & No medido \\
 \rowcolor{rowgray}
-MTTR & Tiempo medio de resolución de incidentes & \ph{Valor} \\
-Tasa de resolución N1 (\%) & Incidentes resueltos en primer nivel sin escalamiento & \ph{Valor} \\
+MTTR & Tiempo medio de resoluci\'on de incidentes & No medido \\
+Tasa resoluci\'on N1 (\%) & Incidentes resueltos sin escalamiento & No medido \\
 \rowcolor{rowgray}
-Satisfacción usuario interno & Encuesta de satisfacción del soporte & \ph{Valor} \\
-Incidentes / período & Cantidad de incidentes registrados por mes & \ph{Valor} \\
+Satisfacci\'on usuario interno & Encuesta de satisfacci\'on del soporte & No medido \\
+Incidentes / per\'iodo & Cantidad de incidentes registrados por mes & No medido \\
 \rowcolor{rowgray}
-Tasa de falsos positivos (\%) & Alertas que no corresponden a amenazas reales & \ph{Valor} \\
+Tasa falsos positivos (\%) & Alertas que no corresponden a amenazas & No medido \\
 \bottomrule
 \end{tabularx}
-\caption{KPIs de soporte informático definidos por la empresa.}
+\caption{KPIs de soporte inform\'atico: brechas identificadas en R RESTS GROUP SPA.}
 \end{table}
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CONCLUSIONES
+%              CONCLUSIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
 
-El presente avance (Fase A) permitió establecer una visión integral de [nombre de la empresa] 
-desde sus dimensiones estratégica, operacional y normativa. A partir del levantamiento de 
-información realizado, se identifican los siguientes aspectos relevantes que condicionarán 
-las propuestas arquitectónicas de la Fase B:
+El presente avance (Fase A) permiti\'o establecer una visi\'on integral de \textbf{R RESTS
+GROUP SPA} desde sus dimensiones estrat\'egica, operacional y normativa. A partir del
+levantamiento de informaci\'on realizado mediante entrevistas con el Coordinador de TI
+y la experiencia directa del equipo en la empresa, se identifican los siguientes aspectos
+relevantes que condicionar\'an las propuestas arquitect\'onicas de la Fase B:
 
 \begin{itemize}[leftmargin=1.5em]
-    \item \textbf{Estrategia y crecimiento:} [Síntesis del hallazgo más relevante de la Parte II.]
-    \item \textbf{Infraestructura y deuda técnica:} [Síntesis del hallazgo más relevante de la Parte III.]
-    \item \textbf{Continuidad y seguridad:} [Síntesis del hallazgo más relevante de la Parte IV.]
-    \item \textbf{Patrones anticipados:} [Indicar qué combinaciones de condiciones emergen con 
-    más frecuencia y que ya orientan la propuesta de arquitectura de la Fase B.]
+    \item \textbf{Estrategia y crecimiento:} La empresa tiene una visi\'on de expansi\'on
+    internacional clara, lo que implica que su arquitectura tecnol\'ogica debe prepararse
+    para escalar en volumen de transacciones, usuarios y datos, incorporando m\'as capas
+    de automatizaci\'on e inteligencia artificial.
+
+    \item \textbf{Infraestructura y deuda t\'ecnica:} La arquitectura de monolito modular
+    con dise\~no hexagonal es adecuada para el tama\~no actual, pero la dependencia del
+    protocolo SOAP de GRLOG representa una limitaci\'on de flexibilidad. La ausencia de
+    herramientas formales de monitoreo de infraestructura es una brecha operacional a atender.
+
+    \item \textbf{Continuidad y seguridad:} La empresa carece de BCP, DRP y par\'ametros
+    de continuidad formalmente definidos (MTPoD, RTO, DRT). Dado que opera un servicio
+    cr\'itico 24/7 con dependencias externas cr\'iticas (GRLOG), esta brecha representa
+    un riesgo operacional significativo que deber\'a abordarse en la propuesta de Fase B.
+
+    \item \textbf{Patrones anticipados:} Se identifican patrones de alta dependencia de
+    terceros, ausencia de formalidad en gobernanza y continuidad, y una cultura de
+    innovaci\'on proactiva que favorece la adopci\'on de nuevas arquitecturas. Esto orienta
+    la Fase B hacia propuestas de arquitectura resiliente, observabilidad, y una hoja de
+    ruta de madurez operacional y de seguridad.
 \end{itemize}
 
-Estos hallazgos constituyen la base del análisis estratégico-tecnológico que se desarrollará 
-en la Fase B, donde se vincularán con modelos y arquitecturas computacionales emergentes 
-para formular recomendaciones concretas y fundamentadas.
+Estos hallazgos constituyen la base del an\'alisis estrat\'egico-tecnol\'ogico que se
+desarrollar\'a en la Fase B, donde se vincular\'an con modelos y arquitecturas computacionales
+emergentes para formular recomendaciones concretas y fundamentadas.
 
 \newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                  REFERENCIAS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Referencias}
-% \begin{enumerate}
-%   \item Elliott, J. y García, C. (2026). \textit{Arquitecturas Emergentes -- Material de Clases S1}. 
-%   Universidad Diego Portales, EIT.
-%   \item ISO 22301:2019. \textit{Security and resilience -- Business continuity management systems}.
-%   \item ISO 27001:2022. \textit{Information security management systems -- Requirements}.
-%   \item ISO 31000:2018. \textit{Risk management -- Guidelines}.
-% \end{enumerate}
+%\section*{Referencias}
+%\begin{enumerate}
+%  \item R RESTS GROUP SPA. (2024). \textit{Sitio web corporativo}. Disponible en: \texttt{https://rests.cl/}
+%  \item ISO 22301:2019. \textit{Security and resilience -- Business continuity management systems}.
+%  \item ISO 27001:2022. \textit{Information security management systems -- Requirements}.
+%  \item ISO 31000:2018. \textit{Risk management -- Guidelines}.
+%  \item Leiva, V. (2026). \textit{Informe de Pr\'actica Profesional II -- R RESTS GROUP SPA}. Universidad Diego Portales, EIT.
+%\end{enumerate}
 
 \end{document}

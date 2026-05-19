@@ -1,18 +1,18 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Introducción}{2}{}%
-\contentsline {section}{\numberline {2}Parte I: Contacto con la Empresa e Identificación de las Contrapartes}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Caracterización de la Empresa}{3}{}%
+\contentsline {section}{\numberline {1}Introducci\'on}{2}{}%
+\contentsline {section}{\numberline {2}Parte I: Contacto con la Empresa e Identificaci\'on de las Contrapartes}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Caracterizaci\'on de la Empresa}{3}{}%
 \contentsline {subsection}{\numberline {2.2}Contrapartes Entrevistadas}{3}{}%
-\contentsline {section}{\numberline {3}Parte II: Aspectos Estratégicos del Negocio}{4}{}%
+\contentsline {section}{\numberline {3}Parte II: Aspectos Estrat\'egicos del Negocio}{4}{}%
 \contentsline {subsection}{\numberline {3.1}Estrategia Corporativa y de Negocio}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Proyecciones de Procesamiento y Escalabilidad}{4}{}%
-\contentsline {subsection}{\numberline {3.3}Requisitos de Seguridad y Cumplimiento}{5}{}%
-\contentsline {section}{\numberline {4}Parte III: Recursos y Operación Actual}{7}{}%
-\contentsline {subsection}{\numberline {4.1}Infraestructura y Tecnología Actual}{7}{}%
-\contentsline {subsection}{\numberline {4.2}Talento, Gobernanza y Cultura Tecnológica}{8}{}%
-\contentsline {subsection}{\numberline {4.3}Costos y ROI Esperado}{8}{}%
-\contentsline {section}{\numberline {5}Parte IV: Requerimientos Externos}{10}{}%
-\contentsline {subsection}{\numberline {5.1}Requerimientos de Terceras Partes (Proveedores y Socios)}{10}{}%
-\contentsline {subsection}{\numberline {5.2}Continuidad del Negocio y Gestión de Crisis}{11}{}%
-\contentsline {subsection}{\numberline {5.3}Niveles de Servicio y Soporte Informático}{12}{}%
-\contentsline {section}{\numberline {6}Conclusiones}{15}{}%
+\contentsline {subsection}{\numberline {3.2}Proyecciones de Procesamiento y Escalabilidad}{6}{}%
+\contentsline {subsection}{\numberline {3.3}Requisitos de Seguridad y Cumplimiento}{8}{}%
+\contentsline {section}{\numberline {4}Parte III: Recursos y Operaci\'on Actual}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Infraestructura y Tecnolog\'ia Actual}{11}{}%
+\contentsline {subsection}{\numberline {4.2}Talento, Gobernanza y Cultura Tecnol\'ogica}{13}{}%
+\contentsline {subsection}{\numberline {4.3}Costos y ROI Esperado}{15}{}%
+\contentsline {section}{\numberline {5}Parte IV: Requerimientos Externos}{17}{}%
+\contentsline {subsection}{\numberline {5.1}Requerimientos de Terceras Partes (Proveedores y Socios)}{17}{}%
+\contentsline {subsection}{\numberline {5.2}Continuidad del Negocio y Gesti\'on de Crisis}{18}{}%
+\contentsline {subsection}{\numberline {5.3}Niveles de Servicio y Soporte Inform\'atico}{20}{}%
+\contentsline {section}{\numberline {6}Conclusiones}{24}{}%

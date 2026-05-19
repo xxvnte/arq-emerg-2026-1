@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.17)  17 MAY 2026 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.17)  19 MAY 2026 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -213,22 +213,22 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
  (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
@@ -251,14 +251,14 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <img/unnamed.png, id=1, 513.92pt x 170.6375pt>
 File: img/unnamed.png Graphic file (type png)
 <use img/unnamed.png>
-Package pdftex.def Info: img/unnamed.png  used on input line 45.
+Package pdftex.def Info: img/unnamed.png  used on input line 42.
 (pdftex.def)             Requested size: 256.95937pt x 85.31853pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 65.
+(Font)              <12> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 65.
+(Font)              <8> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 65.
+(Font)              <6> on input line 60.
  [1
 
 {C:/Users/usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/unnamed.png>] (main.toc
@@ -268,12 +268,22 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1] [2] [3]
-Overfull \hbox (33.20744pt too wide) in paragraph at lines 195--195
+ [1] [2] [3] [4]
+Overfull \hbox (33.20744pt too wide) in paragraph at lines 231--231
 []\OT1/cmr/bx/n/12 P7. Es-tra-te-gia a lar-go pla-zo: ex-pan-si^^Son geogr^^Safi-ca y nue-vos pro-duc-tos/mercados 
  []
 
-[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] (main.aux
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+Underfull \hbox (badness 1082) in paragraph at lines 917--917
+[]|\OT1/cmr/m/n/12 Tiempo me-dio de de-tec-
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 917--917
+[]|\OT1/cmr/m/n/12 Encuesta de sa-tis-fac-ci^^Son
+ []
+
+[22] [23] [24] (main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -283,17 +293,17 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5431 strings out of 467870
- 89343 string characters out of 5417387
- 525549 words of memory out of 5000000
- 34250 multiletter control sequences out of 15000+600000
+ 5432 strings out of 467870
+ 89357 string characters out of 5417387
+ 527543 words of memory out of 5000000
+ 34251 multiletter control sequences out of 15000+600000
  635225 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,83p,560b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (16 pages, 137168 bytes).
+Output written on main.pdf (25 pages, 171758 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
