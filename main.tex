@@ -71,18 +71,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducci\'on}
 
-El presente informe corresponde a la Fase A del Taller Final de la asignatura
-\textit{Arquitecturas Emergentes}, cuyo objetivo es levantar informaci\'on estrat\'egica,
-operacional y normativa de una empresa real, como base para la posterior justificaci\'on
-y propuesta de una arquitectura tecnol\'ogica alineada con su negocio (Fase B).
+El presente informe corresponde a la Fase A del Taller Final, el cual tiene como objetivo objetivo es levantar informaci\'on estrat\'egica, operacional y normativa de una empresa real, como base para la Fase B la cual consisten en la justificaci\'on y propuesta de una arquitectura tecnol\'ogica alineada con su negocio.
 
-La empresa seleccionada es R RESTS GROUP SPA, compa\~n\'ia especializada en
-gerenciamiento de riesgos log\'isticos y operacionales, con base en Santiago de Chile.
-La metodolog\'ia de trabajo consisti\'o en entrevistas con el Coordinador de TI de la empresa,
-complementadas con investigaci\'on propia del equipo y el conocimiento directo adquirido
-durante la pr\'actica profesional realizada en la organizaci\'on.
+La empresa seleccionada es R RESTS GROUP SPA, compa\~n\'ia sobre gerenciamiento de riesgos log\'isticos y operacionales, con base en Santiago de Chile.
+La metodolog\'ia de trabajo consisti\'o en una entrevista con el Coordinador de TI de la empresa, complementadas con investigaci\'on propia del equipo.
 
-Este documento estructura los hallazgos en cuatro partes: identificaci\'on de la empresa
+Este informe detalla los hallazgos en cuatro partes, siendo identificaci\'on de la empresa
 y sus contrapartes (Parte I), aspectos estrat\'egicos del negocio (Parte II), recursos y
 operaci\'on actual (Parte III) y requerimientos externos (Parte IV).
 
@@ -104,19 +98,19 @@ operaci\'on actual (Parte III) y requerimientos externos (Parte IV).
 \midrule
 Raz\'on Social          & R RESTS GROUP SPA \\
 \rowcolor{rowgray}
-Rubro / Industria       & Gerenciamiento de riesgos log\'isticos y operacionales; TI aplicada al transporte y seguridad de la cadena de suministro \\
+Rubro / Industria       & Gerenciamiento de riesgos log\'isticos y operacionales, TI aplicada al transporte y seguridad de la cadena de suministro \\
 Marca comercial         & Rests \\
 \rowcolor{rowgray}
 Forma Legal             & Sociedad por Acciones (SpA) \\
 Antig\"uedad            & 4 a\~nos de operaci\'on (fundada en 2021) \\
 \rowcolor{rowgray}
-Propiedad / Dependencia & Empresa independiente; CEO Sim\'on V\'asquez \\
+Propiedad / Dependencia & Empresa independiente, CEO Sim\'on V\'asquez \\
 N.\textordmasculine{} de Empleados      & 35 en total, de los cuales 15 pertenecen al \'area de TI \\
 \rowcolor{rowgray}
 Ventas Anuales          & Informaci\'on no p\'ublica \\
 N.\textordmasculine{} de Locales        & 1 oficina (Av. Vitacura 2939, Las Condes, Regi\'on Metropolitana) \\
 \rowcolor{rowgray}
-Presencia Geogr\'afica  & Chile (sede principal, Las Condes); clientes nacionales de sectores log\'isticos y de transporte \\
+Presencia Geogr\'afica  & Chile (sede principal, Las Condes), clientes nacionales de sectores log\'isticos y de transporte \\
 \bottomrule
 \end{tabularx}
 \caption{Identificaci\'on general de la empresa analizada.}
@@ -152,16 +146,15 @@ Arquimedes Infante & Coordinador de TI & Ingeniero en Inform\'atica & Tecnolog\'
 
 \subsubsection*{\textbf{P1. Misi\'on, visi\'on y objetivos estrat\'egicos}}
 
-La misi\'on de R RESTS GROUP SPA es propiciar una optimizaci\'on de los recursos mediante
+La misi\'on de R RESTS GROUP SPA es entregar una optimizaci\'on de los recursos mediante
 el levantamiento y sistematizaci\'on de informaci\'on de relevancia, ofreciendo asesor\'ias
 y acompa\~namiento en el establecimiento de procedimientos log\'isticos e implementaci\'on
-de soluciones tecnol\'ogicas para la cobertura, seguimiento y resguardo controlado de los riesgos
-operacionales de sus clientes.
+de soluciones tecnol\'ogicas para la cobertura, seguimiento y resguardo controlado de los riesgos operacionales de sus clientes.
 
 La visi\'on estrat\'egica de la empresa apunta a competir a nivel internacional con las principales
 compa\~n\'ias de gerenciamiento de riesgos y log\'istica, posicion\'andose como un referente
 tecnol\'ogico en la regi\'on. Los objetivos estrat\'egicos actuales incluyen la expansi\'on de su
-cartera de clientes a mercados internacionales, el desarrollo de nuevas plataformas tecnol\'ogicas
+catálogo de clientes a mercados internacionales, el desarrollo de nuevas plataformas tecnol\'ogicas
 propias que automaticen y optimicen la operaci\'on, y la incorporaci\'on de inteligencia artificial
 y an\'alisis de datos como ejes diferenciales de sus servicios. Adicionalmente, la empresa contempla
 en el corto plazo la incorporaci\'on de un servicio orientado a la reducci\'on de huella de carbono
@@ -175,7 +168,7 @@ en la supervisi\'on continua en tiempo real de cargas y rutas mediante una plata
 de GPS, gestionando alertas y eventos de riesgo de forma proactiva. Este servicio es el principal
 generador de ingresos y el que define la propuesta de valor central de Rests ante sus clientes.
 
-Complementariamente, los servicios de an\'alisis de datos (con Power BI como herramienta
+Además, los servicios de an\'alisis de datos (con Power BI como herramienta
 principal), las inspecciones de almacenaje y los servicios de escolta y apertura
 de candados satelitales conforman el portafolio completo. Entre los clientes actuales se
 identifican empresas como Mondelez, San Jos\'e, D\&C y Caleta, lo que refleja presencia en
@@ -185,12 +178,11 @@ la carga de los clientes.
 
 \subsubsection*{\textbf{P3. Principales procesos de negocio que sostienen la operaci\'on}}
 
-Los procesos centrales de Rests son: (1) el monitoreo en tiempo real de viajes y flotas
-mediante el sistema GRLOG, operado por el equipo de operadores durante turnos de 24 horas;
-(2) el an\'alisis y reporte de datos de eventos y riesgos mediante Power BI, que permite
-generar informes para los clientes; (3) la automatizaci\'on de carga de viajes al sistema
+Los procesos centrales de Rests consisten primero en el monitoreo en tiempo real de viajes y flotas
+mediante el sistema GRLOG, operado por el equipo de operadores durante turnos de 24 horas, segundo en el an\'alisis y reporte de datos de eventos y riesgos mediante Power BI, que permite
+generar informes para los clientes, tercero en la automatizaci\'on de carga de viajes al sistema
 de monitoreo mediante planillas Excel, gestionada por la plataforma de automatizaciones desarrollada
-internamente; y (4) la gesti\'on de alertas cr\'iticas, donde el sistema de inteligencia
+internamente, y cuarto en la gesti\'on de alertas cr\'iticas, donde el sistema de inteligencia
 artificial basado en GPT-5 nano de OpenAI apoya el tratamiento y clasificaci\'on de eventos en tiempo
 real. El soporte t\'ecnico interno se gestiona por un sistema de tickets v\'ia correo electr\'onico,
 coordinado por el equipo de TI.
@@ -205,35 +197,35 @@ de los sistemas internos.
 
 La evoluci\'on esperada del modelo apunta a una mayor automatizaci\'on de procesos operativos,
 reduciendo la intervenci\'on manual en la carga de viajes y el tratamiento de alertas mediante
-el uso de inteligencia artificial. Asimismo, se proyecta incorporar nuevas capas de an\'alisis
+el uso de inteligencia artificial. También, se proyecta incorporar nuevas capas de an\'alisis
 predictivo que permitan anticipar riesgos en rutas antes de que ocurran, transitando desde un
 modelo reactivo a uno m\'as proactivo y predictivo.
 
 \subsubsection*{\textbf{P5. Proyecci\'on de crecimiento en los pr\'oximos 3--5 a\~nos}}
 
 La proyecci\'on estrat\'egica de Rests apunta a la internacionalizaci\'on de sus servicios,
-buscando competir con empresas de gerenciamiento de riesgos a nivel latinoamericano. La adopci\'on de plataformas tecnol\'ogicas de alcance internacional, como el sistema GRLOG, refleja una orientaci\'on hacia est\'andares del mercado latinoamericano y constituye un primer paso hacia esa expansi\'on. En el mediano plazo se contempla el crecimiento de la cartera de clientes nacionales e internacionales, la incorporaci\'on del servicio de huella de
+buscando competir con empresas de gerenciamiento de riesgos a nivel latinoamericano, así como la adopci\'on de plataformas tecnol\'ogicas de alcance internacional, como el sistema GRLOG, refleja una orientaci\'on hacia est\'andares del mercado latinoamericano y constituye un primer paso hacia esa expansi\'on. En el mediano plazo se contempla el crecimiento de la cartera de clientes nacionales e internacionales, la incorporaci\'on del servicio de huella de
 carbono como nueva l\'inea de negocio, y el desarrollo de m\'as capacidades tecnol\'ogicas
 propias que reduzcan la dependencia de sistemas externos como GRLOG.
 
 \subsubsection*{\textbf{P6. Principales riesgos del negocio con impacto en infraestructura tecnol\'ogica}}
 
-Los principales riesgos identificados son: (1) la dependencia cr\'itica de GRLOG,
-sistema externo cuya eventual ca\'ida interrumpe directamente el servicio de monitoreo 24/7;
-(2) fallos de conectividad o GPS que afecten la recepci\'on de datos en tiempo real;
-(3) riesgos de ciberseguridad, mitigados en parte por la infraestructura de Amazon
-Web Services; (4) la dependencia de la API de OpenAI para el tratamiento autom\'atico
-de alertas, cuya interrupci\'on afectar\'ia la automatizaci\'on de la plataforma interna; y
-(5) la escalabilidad ante un aumento significativo de clientes o transacciones, dado
+Los principales riesgos identificados son primero la dependencia cr\'itica de GRLOG,
+sistema externo cuya eventual ca\'ida interrumpe directamente el servicio de monitoreo 24/7,
+segundo fallos de conectividad o GPS que afecten la recepci\'on de datos en tiempo real,
+tercero riesgos de ciberseguridad, mitigados en parte por la infraestructura de Amazon
+Web Services, cuarto la dependencia de la API de OpenAI para el tratamiento autom\'atico
+de alertas, cuya interrupci\'on afectar\'ia la automatizaci\'on de la plataforma interna, y
+quinto la escalabilidad ante un aumento significativo de clientes o transacciones, dado
 que la arquitectura actual no ha sido formalmente dimensionada para escenarios de crecimiento
 internacional.
 
 \subsubsection*{\textbf{P7. Estrategia a largo plazo: expansi\'on geogr\'afica y nuevos productos/mercados}}
 
 A largo plazo, Rests busca posicionarse como una empresa de referencia en gerenciamiento de
-riesgos log\'isticos a nivel latinoamericano. La estrategia contempla la expansi\'on hacia
+riesgos log\'isticos a nivel latinoamericano, donde la estrategia contempla la expansi\'on hacia
 mercados internacionales donde la seguridad de la cadena de suministro es cr\'itica, como
-Brasil, Per\'u y Colombia. Adicionalmente, la incorporaci\'on de un servicio de gesti\'on de
+Brasil, Per\'u y Colombia. Además, la incorporaci\'on de un servicio de gesti\'on de
 huella de carbono en operaciones log\'isticas representa una nueva l\'inea de negocio orientada
 a la sostenibilidad, alineada con regulaciones internacionales y tendencias ESG que son
 crecientemente exigidas por grandes clientes corporativos.
@@ -252,16 +244,15 @@ GRLOG y la plataforma de automatizaciones.
 \subsubsection*{\textbf{P9. Proyecciones de crecimiento en usuarios concurrentes y volumen de datos}}
 
 No existen proyecciones formales documentadas de crecimiento en volumen de usuarios o datos.
-Sin embargo, la estrategia de internacionalizaci\'on de la empresa implica que, en la medida
+Pero, la estrategia de internacionalizaci\'on de la empresa implica que en la medida
 que se incorporen nuevos clientes de otros pa\'ises, el n\'umero de viajes monitoreados, alertas
-generadas y operadores necesarios crecer\'a de manera proporcional. Este crecimiento podr\'ia
-escalar significativamente el volumen de transacciones y la demanda sobre la infraestructura,
-especialmente sobre la plataforma de automatizaciones y la API de OpenAI.
+generadas y operadores necesarios crecer\'a de manera proporcional, este crecimiento podr\'ia
+escalar significativamente el volumen de transacciones y la demanda sobre la infraestructura especialmente sobre la plataforma de automatizaciones y la API de OpenAI.
 
 \subsubsection*{\textbf{P10. Peaks de carga y estacionalidades}}
 
 La naturaleza del negocio implica una carga pr\'acticamente constante durante las 24 horas del
-d\'ia, dado que el monitoreo es continuo. No obstante, los peaks m\'as pronunciados ocurren
+d\'ia, dado que el monitoreo es continuo, sin embargo, los peaks m\'as pronunciados ocurren
 cuando se registran eventos de riesgo simult\'aneos en m\'ultiples rutas, generando r\'afagas
 de alertas que deben ser procesadas en tiempo real. El flujo de datos GPS opera con actualizaciones
 peri\'odicas por segundos, lo que constituye una demanda sostenida m\'as que picos estacionales
@@ -274,7 +265,7 @@ El servicio de monitoreo 24/7 exige tiempos de respuesta muy bajos para la recep
 procesamiento de alertas, dado que cualquier demora puede comprometer la seguridad de la carga
 monitoreada. Si bien no existen SLA formalmente documentados para los sistemas internos, la
 naturaleza operacional del negocio impone impl\'icitamente requerimientos de latencia del orden
-de segundos para la detecci\'on y notificaci\'on de eventos cr\'iticos. La plataforma de
+de segundos para la detecci\'on y notificaci\'on de eventos cr\'iticos, la plataforma de
 automatizaciones debe procesar y cargar viajes en tiempos razonables para no interrumpir
 el flujo operacional de los operadores.
 
@@ -290,7 +281,7 @@ de failover o redundancia activa para todos los componentes del sistema.
 \subsubsection*{\textbf{P13. Adopci\'on de tecnolog\'ias nuevas y su impacto potencial}}
 
 La empresa ya ha adoptado inteligencia artificial como tecnolog\'ia emergente, incorporando
-el modelo GPT-5 nano de OpenAI para el tratamiento autom\'atico de alertas y la transformaci\'on
+modelos de inteligencia artificial de OpenAI para el tratamiento autom\'atico de alertas y la transformaci\'on
 de datos en la plataforma de automatizaciones. El impacto de esta adopci\'on es positivo en
 t\'erminos de eficiencia operacional, reduciendo la carga manual sobre los operadores. A futuro
 se contempla la incorporaci\'on de an\'alisis predictivo para anticipar riesgos en rutas, y un
@@ -320,7 +311,7 @@ corto plazo.
 
 \subsubsection*{\textbf{P16. Normativas y est\'andares aplicables}}
 
-Dado que el sistema GRLOG opera bajo un dominio brasilero (grlogapp.com.br) y la empresa mantiene
+Dado que el sistema GRLOG opera bajo un dominio brasileño (grlogapp.com.br) y la empresa mantiene
 operaciones e integraciones de datos con esa plataforma, existe exposici\'on a regulaciones de
 protecci\'on de datos de Brasil, particularmente la LGPD (Lei Geral de Prote\c{c}\~ao de
 Datos), equivalente brasile\~no del GDPR europeo. En Chile, aplica la Ley 19.628 sobre
@@ -342,14 +333,14 @@ para la organizaci\'on a medida que escale sus operaciones internacionales.
 
 El sistema GRLOG registra de forma autom\'atica todos los eventos de viajes, alertas y ocurrencias
 asociadas al monitoreo de flotas, lo que constituye una traza operacional completa de cada ruta
-gestionada. Esta trazabilidad es fundamental para la generaci\'on de reportes a clientes y para
-la auditor\'ia de eventos de riesgo. La plataforma de automatizaciones desarrollada internamente
+gestionada, esta trazabilidad es fundamental para la generaci\'on de reportes a clientes y para
+la auditor\'ia de eventos de riesgo, la plataforma de automatizaciones desarrollada internamente
 tambi\'en mantiene registros de las transformaciones y cargas de datos realizadas mediante la
 API de OpenAI y la integraci\'on SOAP con GRLOG.
 
 \subsubsection*{\textbf{P19. Datos sensibles o confidenciales y su protecci\'on}}
 
-Los datos m\'as sensibles que maneja la empresa incluyen: coordenadas GPS en tiempo real de
+Los datos m\'as sensibles que maneja la empresa incluyen coordenadas GPS en tiempo real de
 flotas de clientes, rutas y destinos de cargas, informaci\'on de clientes corporativos
 (Mondelez, San Jos\'e, entre otros) y datos operacionales de viajes. Estos datos son
 procesados por GRLOG y la plataforma interna, y transmitidos a trav\'es de la API SOAP.
@@ -378,7 +369,7 @@ documentado de gesti\'on del ciclo de vida de cuentas de usuario, lo que constit
 
 La protecci\'on contra ciberataques es provista principalmente por la infraestructura de
 Amazon Web Services, que incluye controles como grupos de seguridad (firewall virtual),
-cifrado en tr\'ansito y en reposo, y servicios de detecci\'on de amenazas. Adicionalmente,
+cifrado en tr\'ansito y en reposo, y servicios de detecci\'on de amenazas. Además,
 la empresa cuenta con CyberArmor como consultora externa que apoya en aspectos de
 seguridad de software. El uso de HTTPS para las comunicaciones web y la integraci\'on mediante
 API SOAP con GRLOG son pr\'acticas que contribuyen a la seguridad de las transmisiones de datos.
