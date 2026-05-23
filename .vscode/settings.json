@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\diego\\Documents\\GitHub\\arq-emerg-2026-1\\main.aux": true,
+        "**/c:\\Users\\diego\\Documents\\GitHub\\arq-emerg-2026-1\\main.log": true,
+        "**/c:\\Users\\diego\\Documents\\GitHub\\arq-emerg-2026-1\\main.gz": true,
+        "**/c:\\Users\\diego\\Documents\\GitHub\\arq-emerg-2026-1\\main.out": true
+    }
+}
