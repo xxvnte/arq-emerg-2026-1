@@ -422,21 +422,21 @@ corporativos.
 
 \subsubsection*{\textbf{P26. Tecnolog\'ias actuales en uso (hardware, software, redes)}}
 
-El stack tecnol\'ogico de las aplicaciones desarrolladas internamente incluye
+El stack tecnol\'ogico principal de las aplicaciones desarrolladas internamente comprende:
 Node.js y Express en el backend, Next.js en el frontend,
-MongoDB como base de datos en modalidad PaaS, y GitHub para el
+MongoDB como base de datos (contratada como PaaS), y GitHub para el
 control de versiones con flujo de trabajo basado en ramas. Para la automatizaci\'on de
 viajes, se integra la API de OpenAI (modelo GPT-5 nano) para la transformaci\'on
 de datos. La comunicaci\'on con el sistema de monitoreo GRLOG se realiza mediante una
 API SOAP con intercambio de mensajes en formato XML. Los reportes anal\'iticos
-se generan con Power BI, y la infraestructura de nube est\'a basada en
+se generan mediante Power BI. La infraestructura de nube est\'a basada en
 Amazon Web Services (AWS).
 
 \subsubsection*{\textbf{P27. Arquitectura tecnol\'ogica actual}}
 
-Las aplicaciones internas como la plataforma de automatizaciones y sistema de
-monitoreo integrado siguen una arquitectura de monolito modular con dise\~no
-hexagonal. Este enfoque organiza el sistema en m\'odulos con responsabilidades definidas y 
+Las aplicaciones desarrolladas internamente (plataforma de automatizaciones y sistema de
+monitoreo integrado) siguen una arquitectura de monolito modular con dise\~no
+hexagonal. Este enfoque organiza el sistema en m\'odulos con responsabilidades claramente
 delimitadas, mientras que la arquitectura hexagonal (puertos y adaptadores) permite desacoplar
 la l\'ogica de negocio de los detalles de infraestructura (base de datos, APIs externas),
 facilitando la prueba y el reemplazo de componentes. El sistema GRLOG es una plataforma
@@ -444,16 +444,16 @@ SaaS externa cuya arquitectura interna no es conocida por la empresa.
 
 \subsubsection*{\textbf{P28. Uso de servicios en la nube, en sitio o h\'ibridos}}
 
-La empresa opera bajo un modelo principalmente en la nube, utilizando servicios
+La empresa opera bajo un modelo predominantemente en nube, utilizando servicios
 PaaS de AWS para el despliegue de sus aplicaciones y MongoDB en la nube para la base de
 datos. GRLOG y el SaaS web tambi\'en son servicios en la nube contratados por suscripci\'on.
-Esta decisi\'on responde a criterios de costo que implica la eliminaci'on de la inversi\'on en hardware propio,
-escalabilidad para ajustar capacidad seg\'un demanda y seguridad al delegar parte de los controles
-al proveedor de nube. No existe infraestructura on-premise significativa en la empresa.
+Esta decisi\'on responde a criterios de costo (eliminar inversi\'on en hardware propio),
+escalabilidad (ajustar capacidad seg\'un demanda) y seguridad (delegar parte de los controles
+al proveedor de nube). No existe infraestructura on-premise significativa en la empresa.
 
 \subsubsection*{\textbf{P29. Sistemas heredados (\textit{legacy}) que deben mantenerse o migrarse}}
 
-El sistema principal con caracter\'isticas de legacy en t\'erminos de integraci\'on es
+El principal sistema con caracter\'isticas de legacy en t\'erminos de integraci\'on es
 GRLOG, que expone su interfaz a trav\'es de una API SOAP con mensajes
 XML, protocolo considerado antiguo en el contexto actual dominado por APIs REST y JSON.
 Esta limitaci\'on fue un desaf\'io significativo durante el desarrollo de la plataforma de
@@ -465,7 +465,7 @@ este protocolo limita la velocidad y flexibilidad de las integraciones futuras.
 
 El nivel de automatizaci\'on operacional ha aumentado con el desarrollo de la plataforma
 de automatizaciones de viajes, que reemplaz\'o la carga manual mediante planillas Excel.
-Adicionalmente, el sistema de IA (GPT-5 nano) agrega automatizaci\'on en el tratamiento de alertas.
+El sistema de IA (GPT-5 nano) agrega automatizaci\'on en el tratamiento de alertas.
 Sin embargo, no se identificaron herramientas formales de monitoreo de infraestructura
 como Datadog, Zabbix o AWS CloudWatch configuradas con alertas sistem\'aticas. El monitoreo
 de la aplicaci\'on y la infraestructura no est\'a formalizado m\'as all\'a de los controles
@@ -473,7 +473,8 @@ b\'asicos que provee AWS.
 
 \subsubsection*{\textbf{P31. Plataformas tecnol\'ogicas externas integradas}}
 
-Las principales integraciones externas son: (1) GRLOG mediante API SOAP, un sistema brasileño que unifica la gestión de las flotas y permite monitorear los viajes desde Brasil; (2)
+Las principales integraciones externas son: (1) GRLOG v\'ia API SOAP, sistema de
+monitoreo de viajes de origen brasile\~no que centraliza la operaci\'on de flotas; (2)
 API de OpenAI (GPT-5 nano) para transformaci\'on inteligente de datos en la
 plataforma de automatizaciones; (3) Power BI para la generaci\'on de reportes y
 an\'alisis de datos operacionales; y (4) servicios de AWS para la infraestructura
@@ -492,9 +493,9 @@ parches para todos los componentes, siendo este un aspecto a formalizar.
 \subsubsection*{\textbf{P33. Tecnolog\'ias evaluadas para futuras implementaciones}}
 
 Las tecnolog\'ias en evaluaci\'on o en fase de incorporaci\'on incluyen la
-expansi\'on del uso de IA m\'as all\'a de la transformaci\'on de datos, por ejemplo
-con an\'alisis predictivo de riesgos en rutas, el desarrollo de capacidades para el nuevo
-servicio de gesti\'on de huella de carbono y la posible integraci\'on de
+expansi\'on del uso de IA m\'as all\'a de la transformaci\'on de datos (por ejemplo,
+an\'alisis predictivo de riesgos en rutas), el desarrollo de capacidades para el nuevo
+servicio de gesti\'on de huella de carbono, y la posible integraci\'on de
 sensores IoT adicionales al sistema de monitoreo para enriquecer los datos de viaje.
 Asimismo, se eval\'ua la posibilidad de desarrollar APIs REST propias que reemplacen
 la dependencia del protocolo SOAP de GRLOG en el mediano plazo.
@@ -503,13 +504,13 @@ la dependencia del protocolo SOAP de GRLOG en el mediano plazo.
 
 \subsubsection*{\textbf{P34. Capacidades t\'ecnicas del equipo interno}}
 
-El equipo de TI est\'a compuesto por 15 profesionales: 5 desarrolladores con experiencia
-en backend y frontend sobre Node.js y Next.js, 4 analistas de datos con competencias en
-Power BI y an\'alisis log\'istico, 3 analistas de QA, 2 profesionales de soporte t\'ecnico y
-1 coordinador de TI. El equipo posee habilidades en desarrollo web moderno, integraci\'on de
-APIs, prompt engineering y an\'alisis de datos. La experiencia con protocolos como SOAP y
-la integraci\'on con sistemas externos como GRLOG representa un conocimiento especializado
-adquirido en el ejercicio de los proyectos.
+El equipo de TI est\'a compuesto por 15 profesionales distribuidos en los siguientes
+roles: 5 desarrolladores (backend y frontend con Node.js y Next.js), 4 analistas de datos
+(con competencias en Power BI y an\'alisis de datos log\'isticos), 3 analistas de QA,
+2 profesionales de soporte t\'ecnico, y 1 coordinador de TI. El equipo posee competencias
+en desarrollo web moderno, integraci\'on de APIs, prompt engineering, y an\'alisis de datos.
+La experiencia con protocolos como SOAP y la integraci\'on con sistemas externos como GRLOG
+representa un conocimiento especializado adquirido en el ejercicio de los proyectos.
 
 \subsubsection*{\textbf{P35. Modelo de gobierno de TI}}
 
@@ -522,47 +523,51 @@ semanales y supervisi\'on diaria como mecanismo de coordinaci\'on del trabajo.
 
 \subsubsection*{\textbf{P36. Cultura respecto a la innovaci\'on y adopci\'on de nuevas tecnolog\'ias}}
 
-En la empresa existe una cultura tecnol\'ogica que quiere ir m\'as all\'a de la operaci\'on diaria.
- Eso se nota en la adopci\'on temprana de inteligencia artificial, como el modelo GPT-5 nano de OpenAI, 
- para apoyar procesos operativos antes de que su uso se masificara en el sector log\'istico chileno.
-  El desarrollo de una plataforma propia de automatizaciones muestra que la empresa est\'a dispuesta a 
-  crear soluciones internas cuando el mercado no ofrece respuestas adecuadas. El equipo de TI mantiene una
-   actitud abierta al aprendizaje continuo y hace del uso de nuevas tecnolog\'ias parte de su rutina de trabajo.
+La cultura tecnol\'ogica de Rests es proactiva e innovadora, evidenciada por la
+incorporaci\'on temprana de modelos de inteligencia artificial (GPT-5 nano de OpenAI) en
+sus procesos operacionales, antes de que su uso generalizado se masificara en el sector
+log\'istico chileno. Asimismo, el desarrollo de una plataforma de automatizaciones propia
+refleja una disposici\'on a invertir en soluci\'on tecnol\'ogica cuando el mercado no
+ofrece una respuesta adecuada. El equipo de TI muestra apertura al aprendizaje de nuevas
+tecnolog\'ias como parte de su din\'amica de trabajo habitual.
 
 \subsubsection*{\textbf{P37. Externalizaci\'on de servicios tecnol\'ogicos}}
 
-Rests externaliza servicios clave para complementar las competencias de su equipo interno.
-Entre estos servicios se encuentran: (1) GRLOG, plataforma SaaS de monitoreo contratada al proveedor brasile\~no; 
-(2) CyberArmor, consultora que apoya con desarrollo de software y seguridad; (3) OpenAI, utilizada como servicio de
- inteligencia artificial bajo pago por uso; y (4) AWS, proveedor de la infraestructura en la nube. Esta estrategia 
- permite acceder a capacidades especializadas sin tener que desarrollarlas desde cero internamente, lo que favorece 
- un modelo de gasto operativo (OPEX) por sobre inversiones de capital (CAPEX).
+La empresa externaliza los siguientes servicios: (1) GRLOG como plataforma SaaS
+de monitoreo, contratada por suscripci\'on al proveedor brasile\~no; (2) CyberArmor,
+consultora externa que provee servicios de desarrollo de software y apoyo en seguridad;
+(3) OpenAI como servicio de IA bajo modelo de pago por uso; y (4) AWS
+como proveedor de infraestructura en la nube. Los criterios de selecci\'on responden a la
+necesidad de acceder a capacidades especializadas que no est\'an disponibles internamente,
+optimizando costos bajo modelos OPEX en lugar de CAPEX.
 
 \subsubsection*{\textbf{P38. Pol\'iticas de gesti\'on del cambio y capacitaci\'on tecnol\'ogica}}
 
-La gesti\'on del cambio en la empresa ocurre de forma informal, apoyada por la supervisi\'on directa
+La gesti\'on del cambio se realiza de manera informal mediante la supervisi\'on directa
 del Coordinador de TI y las reuniones de planificaci\'on semanal, donde se definen,
-asignan y priorizan las tareas de desarrollo. La capacitaci\'on tecnol\'ogica se realiza
-en gran parte de modo aut\'onomo por los desarrolladores, con el coordinador entregando
-orientaci\'on cuando se incorporan nuevas tecnolog\'ias. No existe un programa formal de
-change management ni un proceso estructurado de capacitaci\'on continua.
+asignan y priorizan las tareas de desarrollo. La capacitaci\'on tecnol\'ogica ocurre
+principalmente de manera aut\'onoma por parte de los desarrolladores, complementada con
+orientaci\'on del coordinador cuando se incorporan nuevas tecnolog\'ias. No existe un
+programa formal de change management ni un proceso estructurado de capacitaci\'on continua.
 
 \subsubsection*{\textbf{P39. Medidas para evitar la obsolescencia tecnol\'ogica}}
 
-Para reducir la obsolescencia, la empresa mantiene su plataforma de automatizaciones en
-constante evolución, con mejoras orientadas a optimizar la integración con GRLOG y a
-reducir la dependencia de su interfaz SOAP mediante una capa interna de abstracción.
-La elección de tecnologías actuales como Next.js, Node.js y OpenAI evidencia una apuesta
-por soluciones vigentes y respaldadas por comunidades activas. Sin embargo, aún no existe
-un proceso formal para gestionar el ciclo de vida de estas tecnologías.
+La principal medida adoptada para evitar la obsolescencia es el desarrollo continuo de la
+plataforma de automatizaciones propia, que busca modernizar la interacci\'on con
+GRLOG y reducir la dependencia de su interfaz SOAP mediante una capa de abstracci\'on
+interna. La adopci\'on de tecnolog\'ias modernas como Next.js, Node.js y la API de OpenAI
+refleja una orientaci\'on hacia herramientas vigentes y con amplia comunidad de soporte.
+Sin embargo, no existe un proceso formal de evaluaci\'on del ciclo de vida tecnol\'ogico.
 
 \subsubsection*{\textbf{P40. Colaboraci\'on entre equipos de TI y el resto de la empresa}}
 
-TI se comunica con el \'area operacional principalmente a trav\'es de un sistema de
-tickets v\'ia correo electr\'onico, donde los operadores reportan incidencias y solicitudes de
-soporte. Los encuentros semanales de planificaci\'on integran la perspectiva del negocio
-en la definici\'on de prioridades tecnol\'ogicas. El Coordinador de TI act\'ua como v\'inculo
-entre ambas \'areas, procurando que trabajen de manera coordinada.
+La coordinaci\'on entre TI y el \'area operacional (operadores de monitoreo) se realiza
+principalmente a trav\'es de un sistema de tickets v\'ia correo electr\'onico,
+mediante el cual los operadores reportan incidencias t\'ecnicas o solicitudes de soporte.
+Las reuniones semanales de planificaci\'on incluyen retroalimentaci\'on del negocio sobre
+las prioridades tecnol\'ogicas. El Coordinador de TI act\'ua como puente entre las
+necesidades operacionales y las decisiones de desarrollo, facilitando la comunicaci\'on
+entre ambos equipos.
 
 \subsubsection*{\textbf{P41. Capacidades de liderazgo y toma de decisiones en el \'area tecnol\'ogica}}
 
@@ -578,27 +583,54 @@ de la empresa.
 
 \subsubsection*{\textbf{P42. Presupuesto asignado a tecnolog\'ia y porcentaje sobre ventas}}
 
-La empresa no cuenta con un presupuesto anual fijo para el \'area de TI. Los gastos en tecnolog\'ia se aprueban y ejecutan proyecto por proyecto, dependiendo de las ganancias generadas y de las necesidades espec\'ificas de cada iniciativa. Este enfoque permite flexibilidad financiera, aunque reduce la previsibilidad en la planificaci\'on a largo plazo. No se inform\'o el porcentaje exacto de gastos de TI respecto a los ingresos totales.
+La empresa no cuenta con un presupuesto fijo anual asignado al \'area de TI. Los gastos
+tecnol\'ogicos se aprueban y ejecutan por proyecto, en funci\'on de las ganancias
+generadas y las necesidades espec\'ificas de cada iniciativa. Esta modalidad refleja una
+gesti\'on financiera flexible pero con menor predictibilidad para la planificaci\'on de
+largo plazo. El porcentaje exacto del gasto en TI respecto a los ingresos totales no fue
+informado.
 
 \subsubsection*{\textbf{P43. Evaluaci\'on del retorno de inversi\'on (ROI) de proyectos tecnol\'ogicos}}
 
-Para aprobar un proyecto tecnol\'ogico, se requiere que alcance al menos un 30\% de ganancia. La empresa prioriza un retorno tangible, por lo que todo proyecto debe demostrar que cumple este margen. Este criterio es simple y directo, y se ajusta al modelo de negocio de una empresa de tama\~no medio, donde la rentabilidad es el principal factor para invertir.
+El criterio principal de evaluaci\'on de proyectos tecnol\'ogicos es la rentabilidad
+m\'inima del 30\% de ganancia por proyecto. Todo proyecto debe demostrar que genera al menos
+ese margen para ser aprobado y ejecutado. Esta m\'etrica es simple y directa, alineada con
+el modelo de negocio de una empresa de tama\~no mediano donde el retorno tangible es el
+principal justificador de inversiones tecnol\'ogicas.
 
 \subsubsection*{\textbf{P44. Restricciones econ\'omicas a corto, mediano y largo plazo}}
 
-A corto plazo, la mayor limitaci\'on es la falta de un presupuesto de TI predefinido, lo que puede dificultar inversiones importantes. A mediano plazo, la expansi\'on internacional traer\'a mayores costos de infraestructura, licencias y posiblemente personal adicional. A largo plazo, depender de servicios SaaS y APIs de pago por uso, como OpenAI, puede generar costos variables si el volumen de operaciones crece significativamente.
+A corto plazo, la principal restricci\'on es la ausencia de un presupuesto de TI predefinido,
+lo que puede dificultar la planificaci\'on de inversiones tecnol\'ogicas importantes. A
+mediano plazo, el crecimiento internacional implicar\'a mayores costos de infraestructura,
+licencias y posiblemente contrataci\'on de personal. A largo plazo, la dependencia de
+servicios SaaS y APIs externas con modelos de pago por uso (como OpenAI) puede generar
+costos variables significativos si el volumen de transacciones escala considerablemente.
 
 \subsubsection*{\textbf{P45. Modelos de pago por uso o suscripciones para infraestructura y software}}
 
-La empresa prefiere modelos OPEX sobre CAPEX: OpenAI funciona bajo pago por uso, GRLOG y otros SaaS se pagan mediante suscripci\'on mensual, y AWS opera por consumo. Este enfoque reduce la inversi\'on inicial y permite ajustar los gastos seg\'un la cantidad de operaciones, lo que resulta conveniente para una empresa en crecimiento.
+La empresa utiliza modelos OPEX en lugar de CAPEX para su tecnolog\'ia: OpenAI
+bajo pago por uso (tokens consumidos por llamadas al API), y GRLOG y el SaaS
+web bajo suscripci\'on mensual. AWS tambi\'en opera bajo un modelo de pago por consumo.
+Esta estrategia reduce la inversi\'on inicial y permite ajustar los gastos seg\'un el
+volumen de operaciones, lo cual es conveniente en una empresa en etapa de crecimiento.
 
 \subsubsection*{\textbf{P46. Costos adicionales anticipados por adopci\'on de nuevas tecnolog\'ias}}
 
-Entre los costos extra previstos se incluyen el aumento de consumo de la API de OpenAI al crecer el volumen de viajes, posibles incrementos en los servicios de AWS con la expansi\'on de infraestructura, y el desarrollo del servicio de huella de carbono, que requerir\'a tiempo de ingenier\'ia y nuevas integraciones o licencias de datos ambientales.
+Los principales costos adicionales anticipados incluyen: el escalamiento de los costos
+de la API de OpenAI ante mayor volumen de viajes procesados, posibles incrementos
+en el costo de los servicios de AWS ante expansi\'on de la infraestructura,
+y el desarrollo del nuevo servicio de huella de carbono que requerir\'a tiempo
+de ingenieria y posiblemente nuevas integraciones o licencias de datos ambientales.
 
 \subsubsection*{\textbf{P47. Gesti\'on de costos operativos y de mantenimiento de la infraestructura}}
 
-Gracias al modelo cloud-native, los costos operativos se mantienen bajos, eliminando gastos en hardware, licencias de sistemas operativos y mantenimiento de servidores. El uso de servicios administrados transfiere gran parte de la responsabilidad a los proveedores. No obstante, la empresa no cuenta con un proceso formal de optimizaci\'on de costos en la nube, lo cual podr\'ia volverse relevante a medida que la infraestructura crezca.
+Los costos operativos se mantienen bajos gracias al modelo cloud-native de la empresa,
+que elimina gastos de hardware propio, licencias de sistemas operativos y mantenimiento
+f\'isico de servidores. El uso de servicios administrados (PaaS y SaaS) transfiere gran
+parte de la responsabilidad de mantenimiento a los proveedores. Sin embargo, no existe
+un proceso formal de optimizaci\'on de costos en la nube (cloud cost management), lo
+que podr\'ia ser relevante a medida que la infraestructura crezca.
 
 \newpage
 
@@ -893,11 +925,14 @@ Tasa falsos positivos (\%) & Alertas que no corresponden a amenazas & No medido 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
 
-El presente avance (Fase A) permiti\'o establecer una visi\'on integral de R RESTS
-GROUP SPA desde sus dimensiones estrat\'egica, operacional y normativa. A partir del
-levantamiento de informaci\'on realizado mediante entrevistas con el Coordinador de TI
-y la experiencia directa del equipo en la empresa, se identifican los siguientes aspectos
-relevantes que condicionar\'an las propuestas arquitect\'onicas de la Fase B:
+El desarrollo de esta Fase A nos ha permitido realizar una radiograf\'ia profunda a R RESTS
+GROUP SPA, revelando una organizaci\'on que, si bien naci\'o con un ADN tecnol\'ogico y una loable
+apertura a la innovaci\'on (evidenciada en la adopci\'on temprana de IA), hoy se encuentra en un 
+punto de inflexi\'on cr\'itico. A partir del levantamiento realizado y nuestra visi\'on, el diagn\'ostico
+es claro: la arquitectura y los procesos que llevaron a la empresa a su \'exito actual no ser\'an suficientes
+para sostener de forma segura su visi\'on de expansi\'on internacional y la creciente complejidad operativa 
+que esto implica.
+
 
 \begin{itemize}[leftmargin=1.5em]
     \item Estrategia y crecimiento: La empresa tiene una visi\'on de expansi\'on
@@ -922,9 +957,10 @@ relevantes que condicionar\'an las propuestas arquitect\'onicas de la Fase B:
     ruta de madurez operacional y de seguridad.
 \end{itemize}
 
-Estos hallazgos constituyen la base del an\'alisis estrat\'egico-tecnol\'ogico que se
-desarrollar\'a en la Fase B, donde se vincular\'an con modelos y arquitecturas computacionales
-emergentes para formular recomendaciones concretas y fundamentadas.
+En resumen, la Fase B no consistir\'a \'unicamente en una modernizaci\'on de componentes, sino en el 
+dise\~no de una arquitectura fundacional que act\'ue como el motor habilitador para que Rests escale
+de forma resiliente, observable y competitiva a nivel latinoamericano, alineada con su visi\'on de 
+ser el "Uber de la Log\'istica".
 
 \newpage
 
