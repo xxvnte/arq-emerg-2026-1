@@ -402,7 +402,6 @@ de seguridad de la informaci\'on. Esto representa un \'area de mejora especialme
 ante la expansi\'on internacional proyectada y el manejo de datos sensibles de clientes
 corporativos.
 
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   PARTE III
@@ -417,7 +416,7 @@ El stack tecnol\'ogico principal de las aplicaciones desarrolladas internamente 
 Node.js y Express en el backend, Next.js en el frontend,
 MongoDB como base de datos (contratada como PaaS), y GitHub para el
 control de versiones con flujo de trabajo basado en ramas. Para la automatizaci\'on de
-viajes, se integra la API de OpenAI (modelo GPT-5 nano) para la transformaci\'on
+viajes, se integra la API de OpenAI (modelos como GPT-5 nano o GPT-4o) para la transformaci\'on
 de datos. La comunicaci\'on con el sistema de monitoreo GRLOG se realiza mediante una
 API SOAP con intercambio de mensajes en formato XML. Los reportes anal\'iticos
 se generan mediante Power BI. La infraestructura de nube est\'a basada en
@@ -427,7 +426,7 @@ Amazon Web Services (AWS).
 
 Las aplicaciones desarrolladas internamente (plataforma de automatizaciones y sistema de
 monitoreo integrado) siguen una arquitectura de monolito modular con dise\~no
-hexagonal. Este enfoque organiza el sistema en m\'odulos con responsabilidades claramente
+hexagonal, enfoque que organiza el sistema en m\'odulos con responsabilidades claramente
 delimitadas, mientras que la arquitectura hexagonal (puertos y adaptadores) permite desacoplar
 la l\'ogica de negocio de los detalles de infraestructura (base de datos, APIs externas),
 facilitando la prueba y el reemplazo de componentes. El sistema GRLOG es una plataforma
@@ -446,17 +445,17 @@ al proveedor de nube). No existe infraestructura on-premise significativa en la 
 
 El principal sistema con caracter\'isticas de legacy en t\'erminos de integraci\'on es
 GRLOG, que expone su interfaz a trav\'es de una API SOAP con mensajes
-XML, protocolo considerado antiguo en el contexto actual dominado por APIs REST y JSON.
-Esta limitaci\'on fue un desaf\'io significativo durante el desarrollo de la plataforma de
+XML, protocolo considerado antiguo en el contexto actual dominado por APIs REST y JSON,
+esta limitaci\'on fue un desaf\'io significativo durante el desarrollo de la plataforma de
 automatizaciones, requiriendo la implementaci\'on de un flujo de transformaci\'on de datos
-espec\'ifico para mapear el formato interno al XML requerido por GRLOG. La dependencia de
+espec\'ifico para mapear el formato interno al XML requerido por GRLOG, la dependencia de
 este protocolo limita la velocidad y flexibilidad de las integraciones futuras.
 
 \subsubsection*{\textbf{P30. Niveles de automatizaci\'on y monitoreo de la infraestructura}}
 
 El nivel de automatizaci\'on operacional ha aumentado con el desarrollo de la plataforma
 de automatizaciones de viajes, que reemplaz\'o la carga manual mediante planillas Excel.
-El sistema de IA (GPT-5 nano) agrega automatizaci\'on en el tratamiento de alertas.
+El sistema de IA agrega automatizaci\'on en el tratamiento de alertas.
 Sin embargo, no se identificaron herramientas formales de monitoreo de infraestructura
 como Datadog, Zabbix o AWS CloudWatch configuradas con alertas sistem\'aticas. El monitoreo
 de la aplicaci\'on y la infraestructura no est\'a formalizado m\'as all\'a de los controles
@@ -464,11 +463,10 @@ b\'asicos que provee AWS.
 
 \subsubsection*{\textbf{P31. Plataformas tecnol\'ogicas externas integradas}}
 
-Las principales integraciones externas son: (1) GRLOG v\'ia API SOAP, sistema de
-monitoreo de viajes de origen brasile\~no que centraliza la operaci\'on de flotas; (2)
-API de OpenAI (GPT-5 nano) para transformaci\'on inteligente de datos en la
-plataforma de automatizaciones; (3) Power BI para la generaci\'on de reportes y
-an\'alisis de datos operacionales; y (4) servicios de AWS para la infraestructura
+Las principales integraciones externas son GRLOG v\'ia API SOAP, sistema de
+monitoreo de viajes de origen brasile\~no que centraliza la operaci\'on de flotas, luego la API de OpenAI para transformaci\'on inteligente de datos en la
+plataforma de automatizaciones, después de eso Power BI para la generaci\'on de reportes y
+an\'alisis de datos operacionales, y finalmente servicios de AWS para la infraestructura
 de nube. Estas integraciones son cr\'iticas para la operaci\'on del negocio y representan
 dependencias externas que deben ser gestionadas mediante SLA y planes de contingencia.
 
@@ -477,7 +475,7 @@ dependencias externas que deben ser gestionadas mediante SLA y planes de conting
 Las actualizaciones del software propio se gestionan mediante un flujo de trabajo basado
 en ramas de GitHub, con revisiones de c\'odigo previas a la integraci\'on en
 la rama principal. Las reuniones de planificaci\'on semanales permiten priorizar y
-coordinar los cambios. Los parches de seguridad de la infraestructura son responsabilidad
+coordinar los cambios, mientras que los parches de seguridad de la infraestructura son responsabilidad
 de AWS en los servicios PaaS utilizados. No existe un proceso formal de gesti\'on de
 parches para todos los componentes, siendo este un aspecto a formalizar.
 
@@ -509,13 +507,13 @@ El gobierno de TI es centralizado, liderado por Arquimedes Infante como Coordina
 de TI, quien reporta directamente al CEO Sim\'on V\'asquez. Las decisiones tecnol\'ogicas se
 toman a nivel del coordinador en conjunto con el CEO, sin la aplicaci\'on de un marco de
 gobierno formal como COBIT o ITIL. No se aplican metodolog\'ias \'agiles espec\'ificas
-(como Scrum o Kanban) de manera formal; en cambio, se utilizan reuniones de planificaci\'on
+(como Scrum o Kanban) de manera formal, en cambio, se utilizan reuniones de planificaci\'on
 semanales y supervisi\'on diaria como mecanismo de coordinaci\'on del trabajo.
 
 \subsubsection*{\textbf{P36. Cultura respecto a la innovaci\'on y adopci\'on de nuevas tecnolog\'ias}}
 
 La cultura tecnol\'ogica de Rests es proactiva e innovadora, evidenciada por la
-incorporaci\'on temprana de modelos de inteligencia artificial (GPT-5 nano de OpenAI) en
+incorporaci\'on temprana de modelos de inteligencia artificial en
 sus procesos operacionales, antes de que su uso generalizado se masificara en el sector
 log\'istico chileno. Asimismo, el desarrollo de una plataforma de automatizaciones propia
 refleja una disposici\'on a invertir en soluci\'on tecnol\'ogica cuando el mercado no
@@ -524,10 +522,9 @@ tecnolog\'ias como parte de su din\'amica de trabajo habitual.
 
 \subsubsection*{\textbf{P37. Externalizaci\'on de servicios tecnol\'ogicos}}
 
-La empresa externaliza los siguientes servicios: (1) GRLOG como plataforma SaaS
-de monitoreo, contratada por suscripci\'on al proveedor brasile\~no; (2) CyberArmor,
-consultora externa que provee servicios de desarrollo de software y apoyo en seguridad;
-(3) OpenAI como servicio de IA bajo modelo de pago por uso; y (4) AWS
+La empresa externaliza los siguientes servicios, GRLOG como plataforma SaaS
+de monitoreo, contratada por suscripci\'on al proveedor brasile\~no, después CyberArmor,
+consultora externa que provee servicios de desarrollo de software y apoyo en seguridad, luego OpenAI como servicio de IA bajo modelo de pago por uso y AWS
 como proveedor de infraestructura en la nube. Los criterios de selecci\'on responden a la
 necesidad de acceder a capacidades especializadas que no est\'an disponibles internamente,
 optimizando costos bajo modelos OPEX en lugar de CAPEX.
@@ -564,9 +561,8 @@ entre ambos equipos.
 
 El liderazgo tecnol\'ogico recae en Arquimedes Infante, Coordinador de TI, quien
 centraliza las decisiones t\'ecnicas, la asignaci\'on de recursos del equipo y la
-priorizaci\'on de proyectos. Su relaci\'on directa con el CEO Sim\'on V\'asquez le otorga
-influencia en la estrategia tecnol\'ogica de la empresa. El modelo de liderazgo es directo
-y pragm\'atico, con un estilo de supervisi\'on cercano que facilita la agilidad en la
+priorizaci\'on de proyectos, y su relaci\'on directa con el CEO Sim\'on V\'asquez le otorga
+influencia en la estrategia tecnol\'ogica de la empresa. El modelo de liderazgo es directo, con un estilo de supervisi\'on cercano que facilita la agilidad en la
 toma de decisiones pero que podr\'ia representar un cuello de botella ante el crecimiento
 de la empresa.
 
@@ -574,7 +570,7 @@ de la empresa.
 
 \subsubsection*{\textbf{P42. Presupuesto asignado a tecnolog\'ia y porcentaje sobre ventas}}
 
-La empresa no cuenta con un presupuesto fijo anual asignado al \'area de TI. Los gastos
+La empresa no cuenta con un presupuesto fijo anual asignado al \'area de TI, ya que los gastos
 tecnol\'ogicos se aprueban y ejecutan por proyecto, en funci\'on de las ganancias
 generadas y las necesidades espec\'ificas de cada iniciativa. Esta modalidad refleja una
 gesti\'on financiera flexible pero con menor predictibilidad para la planificaci\'on de
@@ -584,7 +580,7 @@ informado.
 \subsubsection*{\textbf{P43. Evaluaci\'on del retorno de inversi\'on (ROI) de proyectos tecnol\'ogicos}}
 
 El criterio principal de evaluaci\'on de proyectos tecnol\'ogicos es la rentabilidad
-m\'inima del 30\% de ganancia por proyecto. Todo proyecto debe demostrar que genera al menos
+m\'inima del 30\% de ganancia por proyecto, todo proyecto debe demostrar que genera al menos
 ese margen para ser aprobado y ejecutado. Esta m\'etrica es simple y directa, alineada con
 el modelo de negocio de una empresa de tama\~no mediano donde el retorno tangible es el
 principal justificador de inversiones tecnol\'ogicas.
@@ -594,7 +590,7 @@ principal justificador de inversiones tecnol\'ogicas.
 A corto plazo, la principal restricci\'on es la ausencia de un presupuesto de TI predefinido,
 lo que puede dificultar la planificaci\'on de inversiones tecnol\'ogicas importantes. A
 mediano plazo, el crecimiento internacional implicar\'a mayores costos de infraestructura,
-licencias y posiblemente contrataci\'on de personal. A largo plazo, la dependencia de
+licencias y posiblemente contrataci\'on de personal, a largo plazo, la dependencia de
 servicios SaaS y APIs externas con modelos de pago por uso (como OpenAI) puede generar
 costos variables significativos si el volumen de transacciones escala considerablemente.
 
@@ -602,13 +598,13 @@ costos variables significativos si el volumen de transacciones escala considerab
 
 La empresa utiliza modelos OPEX en lugar de CAPEX para su tecnolog\'ia: OpenAI
 bajo pago por uso (tokens consumidos por llamadas al API), y GRLOG y el SaaS
-web bajo suscripci\'on mensual. AWS tambi\'en opera bajo un modelo de pago por consumo.
+web bajo suscripci\'on mensual, AWS tambi\'en opera bajo un modelo de pago por consumo.
 Esta estrategia reduce la inversi\'on inicial y permite ajustar los gastos seg\'un el
 volumen de operaciones, lo cual es conveniente en una empresa en etapa de crecimiento.
 
 \subsubsection*{\textbf{P46. Costos adicionales anticipados por adopci\'on de nuevas tecnolog\'ias}}
 
-Los principales costos adicionales anticipados incluyen: el escalamiento de los costos
+Los principales costos adicionales anticipados incluyen el escalamiento de los costos
 de la API de OpenAI ante mayor volumen de viajes procesados, posibles incrementos
 en el costo de los servicios de AWS ante expansi\'on de la infraestructura,
 y el desarrollo del nuevo servicio de huella de carbono que requerir\'a tiempo
@@ -623,7 +619,6 @@ parte de la responsabilidad de mantenimiento a los proveedores. Sin embargo, no 
 un proceso formal de optimizaci\'on de costos en la nube (cloud cost management), lo
 que podr\'ia ser relevante a medida que la infraestructura crezca.
 
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   PARTE IV
@@ -634,11 +629,10 @@ que podr\'ia ser relevante a medida que la infraestructura crezca.
 
 \subsubsection*{\textbf{P48. Proveedores externos cr\'iticos para el negocio}}
 
-Los proveedores cr\'iticos identificados son: (1) GRLOG, plataforma SaaS brasile\~na
-de monitoreo de viajes que sustenta el servicio central de la empresa; (2) CyberArmor,
-consultora que provee desarrollo de software y apoyo en seguridad; (3) OpenAI,
-proveedor de la API de inteligencia artificial utilizada en la plataforma de automatizaciones;
-(4) Amazon Web Services (AWS), proveedor de infraestructura cloud; y (5) MongoDB
+Los proveedores cr\'iticos identificados son GRLOG, plataforma SaaS brasile\~na
+de monitoreo de viajes que sustenta el servicio central de la empresa, después CyberArmor,
+consultora que provee desarrollo de software y apoyo en seguridad, luego OpenAI,
+proveedor de la API de inteligencia artificial utilizada en la plataforma de automatizaciones, después Amazon Web Services (AWS), proveedor de infraestructura cloud y MongoDB
 como servicio de base de datos en la nube. Entre estos, GRLOG representa el proveedor de
 mayor criticidad operacional.
 
@@ -655,7 +649,7 @@ negociados.
 
 Los requisitos de seguridad exigidos a terceros se apoyan principalmente en los controles
 que cada proveedor implementa por defecto: AWS provee certificaciones de seguridad (SOC 2,
-ISO 27001) y cumplimiento con regulaciones internacionales; GRLOG gestiona sus propios
+ISO 27001) y cumplimiento con regulaciones internacionales, GRLOG gestiona sus propios
 controles de seguridad como sistema brasile\~no sujeto a la LGPD. No se ha identificado
 un proceso formal de exigencia de requisitos de seguridad espec\'ificos a cada proveedor
 m\'as all\'a de los compromisos contractuales de los SLA.
@@ -675,7 +669,7 @@ La validaci\'on de proveedores se realiza principalmente a trav\'es de los contr
 y SLA formales establecidos con GRLOG y CyberArmor, que definen responsabilidades y
 compromisos de calidad de servicio. No se ha identificado un proceso formal de auditor\'ia
 de proveedores, evaluaci\'on de certificaciones ISO o cuestionarios de seguridad previos
-a la contrataci\'on. La selecci\'on de proveedores se ha basado en la reputaci\'on del
+a la contrataci\'on, y la selecci\'on de proveedores se ha basado en la reputaci\'on del
 servicio y la capacidad de cumplir con los requerimientos operacionales de la empresa.
 
 \subsubsection*{\textbf{P53. Integraciones de sistemas con terceros y garant\'ias de compatibilidad y seguridad}}
@@ -704,14 +698,14 @@ prolongado, ni proveedores alternativos identificados para reemplazarlo en caso 
 La empresa no cuenta con un Plan de Continuidad del Negocio (BCP) formalmente
 documentado. La principal medida de continuidad identificada es la existencia de respaldos
 internacionales de bases de datos, que permiten recuperar la informaci\'on ante fallas de
-los sistemas. El servicio 24/7 es sostenido por turnos de operadores, lo que garantiza
+los sistemas, y el servicio 24/7 es sostenido por turnos de operadores, lo que garantiza
 presencia humana continua, pero no existe un protocolo formal de respuesta ante escenarios
 de crisis tecnol\'ogica que defina roles, pasos y tiempos de recuperaci\'on.
 
 \subsubsection*{\textbf{P56. Procesos definidos para la recuperaci\'on ante desastres tecnol\'ogicos}}
 
 No se ha identificado un Plan de Recuperaci\'on ante Desastres (DRP) formalmente
-documentado. Ante una falla de los sistemas cr\'iticos, la respuesta depende del soporte
+documentado, ya que ante una falla de los sistemas cr\'iticos, la respuesta depende del soporte
 provisto por los proveedores (GRLOG, AWS) seg\'un los SLA vigentes, y de la capacidad del
 equipo de TI liderado por Arquimedes Infante para restaurar el servicio. Los respaldos de
 base de datos internacionales son el mecanismo de recuperaci\'on de datos m\'as concreto
@@ -760,7 +754,7 @@ progresivamente m\'as exigentes.
 La disponibilidad continua del servicio se apoya en la infraestructura de AWS,
 que provee alta disponibilidad a nivel de nube, y en la presencia de operadores durante
 las 24 horas del d\'ia. Ante fallos imprevistos del software, la respuesta depende del
-equipo de TI y del soporte de los proveedores. No existen mecanismos automatizados de
+equipo de TI y del soporte de los proveedores, y no existen mecanismos automatizados de
 failover definidos para todos los componentes cr\'iticos del sistema.
 
 \subsubsection*{\textbf{P60. Estrategia de redundancia y recuperaci\'on geogr\'afica}}
@@ -768,15 +762,14 @@ failover definidos para todos los componentes cr\'iticos del sistema.
 La empresa cuenta con respaldos internacionales de bases de datos como \'unica
 medida de redundancia geogr\'afica identificada. No se ha definido una estrategia formal
 de recuperaci\'on geogr\'afica que incluya zonas de disponibilidad m\'ultiples, replicaci\'on
-activa-activa o despliegue multi-regi\'on en AWS. Dado que GRLOG opera desde Brasil y
+activa-activa o despliegue multi-regi\'on en AWS,y dado que GRLOG opera desde Brasil y
 los datos se respaldan internacionalmente, existe cierta distribuci\'on geogr\'afica
 impl\'icita, pero sin un dise\~no expl\'icito de resiliencia regional.
 
 \subsubsection*{\textbf{P61. Herramientas de monitoreo y alerta para detectar incidentes}}
 
 El monitoreo operacional de flotas se realiza a trav\'es de GRLOG, que genera
-alertas en tiempo real sobre eventos cr\'iticos de los viajes. El sistema de IA basado
-en GPT-5 nano apoya el tratamiento autom\'atico de estas alertas. Para el monitoreo
+alertas en tiempo real sobre eventos cr\'iticos de los viajes. El sistema de IA apoya el tratamiento autom\'atico de estas alertas. Para el monitoreo
 de la infraestructura tecnol\'ogica propia (servidores, aplicaciones), no se ha
 identificado el uso de herramientas especializadas como Datadog o AWS CloudWatch con
 alertas configuradas sistem\'aticamente.
@@ -797,8 +790,7 @@ restauraci\'on medidos o validados mediante pruebas.
 No existen tiempos de respuesta formalmente definidos para incidentes tecnol\'ogicos internos.
 Sin embargo, dado que el servicio de monitoreo es 24/7, el equipo de soporte de TI brinda
 atenci\'on continua. Los incidentes se reportan v\'ia correo electr\'onico, lo que puede
-generar demoras en la detecci\'on y respuesta respecto a sistemas de alerta autom\'atica.
-El soporte de los proveedores cr\'iticos (GRLOG, CyberArmor) est\'a definido por los SLA
+generar demoras en la detecci\'on y respuesta respecto a sistemas de alerta autom\'atica, y el soporte de los proveedores cr\'iticos (GRLOG, CyberArmor) est\'a definido por los SLA
 vigentes.
 
 \subsubsection*{\textbf{P64. SLA para distintas plataformas y servicios tecnol\'ogicos}}
@@ -806,22 +798,22 @@ vigentes.
 Los SLA formalmente definidos corresponden a los contratos con GRLOG y
 CyberArmor. Para los sistemas internos desarrollados por el equipo de TI,
 no existen SLA documentados que definan niveles de disponibilidad, tiempos de respuesta
-o criterios de escalamiento. AWS y OpenAI operan bajo sus t\'erminos est\'andar de
+o criterios de escalamiento, y AWS y OpenAI operan bajo sus t\'erminos est\'andar de
 servicio p\'ublicos, que incluyen compromisos de disponibilidad de infraestructura pero
 no SLA espec\'ificos para el uso de la empresa.
 
 \subsubsection*{\textbf{P65. Gesti\'on de solicitudes y tickets de soporte t\'ecnico}}
 
 El soporte t\'ecnico interno se gestiona mediante un sistema de tickets v\'ia correo
-electr\'onico. Los operadores y usuarios internos env\'ian sus solicitudes o reportes de
+electr\'onico, y los operadores y usuarios internos env\'ian sus solicitudes o reportes de
 incidencia al equipo de TI por esta v\'ia. No se utiliza una plataforma ITSM dedicada
-(como ServiceNow, Jira Service Management o Freshdesk). Este modelo es funcional para
+(como ServiceNow, Jira Service Management o Freshdesk), este modelo es funcional para
 el tama\~no actual de la empresa, pero puede presentar limitaciones de trazabilidad y
 priorizaci\'on ante el crecimiento de la organizaci\'on.
 
 \subsubsection*{\textbf{P66. Proceso de escalamiento de problemas dentro del soporte t\'ecnico}}
 
-El proceso de escalamiento es informal y centralizado: los incidentes que no pueden ser
+El proceso de escalamiento es informal y centralizado, ya que los incidentes que no pueden ser
 resueltos por el equipo de soporte (primer nivel) se escalan directamente a
 Arquimedes Infante, Coordinador de TI, quien determina si el problema requiere
 intervenci\'on de un desarrollador interno o del soporte externo de los proveedores
@@ -831,7 +823,7 @@ con criterios documentados.
 \subsubsection*{\textbf{P67. Herramientas o plataformas de gesti\'on de incidencias y soporte}}
 
 La \'unica herramienta de gesti\'on de incidencias identificada es el correo
-electr\'onico como canal de recepci\'on de tickets. No se utiliza ning\'una plataforma
+electr\'onico como canal de recepci\'on de tickets, no se utiliza ning\'una plataforma
 ITSM especializada. GitHub se utiliza para la gesti\'on de incidencias relacionadas con
 el c\'odigo (bugs, pull requests, issues), pero no como herramienta de soporte al usuario
 final. Esta brecha en herramientas de soporte representa un \'area de mejora relevante.
@@ -847,17 +839,17 @@ cualquier momento del d\'ia.
 \subsubsection*{\textbf{P69. Medici\'on del desempe\~no del soporte t\'ecnico}}
 
 No existen indicadores formales para medir el desempe\~no del soporte t\'ecnico
-interno. No se calcula MTTD (tiempo medio de detecci\'on), MTTR (tiempo medio de
-resoluci\'on) ni se realizan encuestas de satisfacci\'on del usuario interno. La evaluaci\'on
+interno, no se calcula MTTD (tiempo medio de detecci\'on), MTTR (tiempo medio de
+resoluci\'on) ni se realizan encuestas de satisfacci\'on del usuario interno, la evaluaci\'on
 del soporte es cualitativa e informal, basada en la percepci\'on del Coordinador de TI
-y del equipo. La formalizaci\'on de KPIs de soporte es una necesidad identificada para
+y del equipo, y la formalizaci\'on de KPIs de soporte es una necesidad identificada para
 la madurez operacional de la empresa.
 
 \subsubsection*{\textbf{P70. Protocolos de comunicaci\'on con soporte de terceros ante incidentes cr\'iticos}}
 
 La comunicaci\'on con el soporte de proveedores cr\'iticos ante incidentes se realiza
 a trav\'es de los canales definidos en los SLA de GRLOG y CyberArmor, que
-incluyen contacto directo con los equipos de soporte de cada proveedor. No existe un
+incluyen contacto directo con los equipos de soporte de cada proveedor, y no existe un
 protocolo interno documentado que defina los pasos a seguir ante la falla de un
 proveedor cr\'itico, incluyendo tiempos de espera antes de escalar o alternativas
 de operaci\'on durante la interrupci\'on.
@@ -872,9 +864,8 @@ detecci\'on de incidentes cr\'iticos fuera del horario de mayor actividad del eq
 
 \subsubsection*{\textbf{P72. Medidas para evitar problemas recurrentes en los sistemas de soporte}}
 
-No se ha identificado un proceso formal de gesti\'on de problemas (problem management)
-orientado a identificar y eliminar las causas ra\'iz de incidentes repetitivos. Los problemas
-recurrentes se abordan de manera reactiva cuando se presentan. El proceso de revisi\'on de
+No se ha identificado un proceso formal de gesti\'on de problemas orientado a identificar y eliminar las causas ra\'iz de incidentes repetitivos, ya que los problemas
+recurrentes se abordan de manera reactiva cuando se presentan, y el proceso de revisi\'on de
 c\'odigo en GitHub contribuye a reducir la introducci\'on de defectos en el software, pero
 no existe un registro sistem\'atico de incidentes que permita identificar patrones de fallas
 frecuentes.
@@ -882,7 +873,7 @@ frecuentes.
 \subsubsection*{\textbf{P73. KPIs utilizados para evaluar la efectividad del soporte inform\'atico}}
 
 Actualmente la empresa no utiliza KPIs formales para evaluar la efectividad del
-soporte inform\'atico. La siguiente tabla refleja los indicadores que ser\'ia recomendable
+soporte inform\'atico, se presenta la siguiente tabla que refleja los indicadores que ser\'ia recomendable
 implementar, identificados como brechas en la madurez operacional actual de Rests:
 
 \begin{table}[H]
@@ -906,7 +897,7 @@ Incidentes / per\'iodo & Cantidad de incidentes registrados por mes & No medido 
 Tasa falsos positivos (\%) & Alertas que no corresponden a amenazas & No medido \\
 \bottomrule
 \end{tabularx}
-\caption{KPIs de soporte inform\'atico: brechas identificadas en R RESTS GROUP SPA.}
+\caption{KPIs: brechas identificadas en R RESTS GROUP SPA.}
 \end{table}
 
 \newpage
@@ -916,11 +907,11 @@ Tasa falsos positivos (\%) & Alertas que no corresponden a amenazas & No medido 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
 
-El desarrollo de esta Fase A nos ha permitido realizar una radiograf\'ia profunda a R RESTS
-GROUP SPA, revelando una organizaci\'on que, si bien naci\'o con un ADN tecnol\'ogico y una loable
-apertura a la innovaci\'on (evidenciada en la adopci\'on temprana de IA), hoy se encuentra en un 
-punto de inflexi\'on cr\'itico. A partir del levantamiento realizado y nuestra visi\'on, el diagn\'ostico
-es claro: la arquitectura y los procesos que llevaron a la empresa a su \'exito actual no ser\'an suficientes
+El desarrollo de esta fase nos ha permitido realizar una comprensi\'on profunda sobre la empresa R RESTS
+GROUP SPA, revelando una organizaci\'on que, si bien logró una
+apertura a la innovaci\'on (demostrada con la adopci\'on temprana de IA), hoy se encuentra en un 
+punto de inflexi\'on cr\'itico, entonces, a partir del levantamiento realizado y nuestra visi\'on, el diagn\'ostico
+es claro, que la arquitectura y los procesos que llevaron a la empresa a su \'exito actual no ser\'an suficientes
 para sostener de forma segura su visi\'on de expansi\'on internacional y la creciente complejidad operativa 
 que esto implica.
 
@@ -933,25 +924,24 @@ que esto implica.
 
     \item Infraestructura y deuda t\'ecnica: La arquitectura de monolito modular
     con dise\~no hexagonal es adecuada para el tama\~no actual, pero la dependencia del
-    protocolo SOAP de GRLOG representa una limitaci\'on de flexibilidad. La ausencia de
+    protocolo SOAP de GRLOG representa una limitaci\'on de flexibilidad, y la ausencia de
     herramientas formales de monitoreo de infraestructura es una brecha operacional a atender.
 
     \item Continuidad y seguridad: La empresa carece de BCP, DRP y par\'ametros
-    de continuidad formalmente definidos (MTPoD, RTO, DRT). Dado que opera un servicio
+    de continuidad formalmente definidos (MTPoD, RTO, DRT), dado que opera un servicio
     cr\'itico 24/7 con dependencias externas cr\'iticas (GRLOG), esta brecha representa
     un riesgo operacional significativo que deber\'a abordarse en la propuesta de Fase B.
 
     \item Patrones anticipados: Se identifican patrones de alta dependencia de
     terceros, ausencia de formalidad en gobernanza y continuidad, y una cultura de
-    innovaci\'on proactiva que favorece la adopci\'on de nuevas arquitecturas. Esto orienta
+    innovaci\'on proactiva que favorece la adopci\'on de nuevas arquitecturas, esto orienta
     la Fase B hacia propuestas de arquitectura resiliente, observabilidad, y una hoja de
     ruta de madurez operacional y de seguridad.
 \end{itemize}
 
 En resumen, la Fase B no consistir\'a \'unicamente en una modernizaci\'on de componentes, sino en el 
-dise\~no de una arquitectura fundacional que act\'ue como el motor habilitador para que Rests escale
-de forma resiliente, observable y competitiva a nivel latinoamericano, alineada con su visi\'on de 
-ser el "Uber de la Log\'istica".
+dise\~no de una arquitectura fundacional que establezca las bases para que Rests escale
+de forma resiliente y competitiva a nivel latinoamericano, alineada con su visi\'on.
 
 \newpage
 

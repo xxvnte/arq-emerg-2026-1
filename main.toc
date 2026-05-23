@@ -7,12 +7,12 @@
 \contentsline {subsection}{\numberline {3.1}Estrategia Corporativa y de Negocio}{4}{}%
 \contentsline {subsection}{\numberline {3.2}Proyecciones de Procesamiento y Escalabilidad}{6}{}%
 \contentsline {subsection}{\numberline {3.3}Requisitos de Seguridad y Cumplimiento}{8}{}%
-\contentsline {section}{\numberline {4}Parte III: Recursos y Operaci\'on Actual}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Infraestructura y Tecnolog\'ia Actual}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Talento, Gobernanza y Cultura Tecnol\'ogica}{13}{}%
+\contentsline {section}{\numberline {4}Parte III: Recursos y Operaci\'on Actual}{10}{}%
+\contentsline {subsection}{\numberline {4.1}Infraestructura y Tecnolog\'ia Actual}{10}{}%
+\contentsline {subsection}{\numberline {4.2}Talento, Gobernanza y Cultura Tecnol\'ogica}{12}{}%
 \contentsline {subsection}{\numberline {4.3}Costos y ROI Esperado}{14}{}%
-\contentsline {section}{\numberline {5}Parte IV: Requerimientos Externos}{17}{}%
-\contentsline {subsection}{\numberline {5.1}Requerimientos de Terceras Partes (Proveedores y Socios)}{17}{}%
-\contentsline {subsection}{\numberline {5.2}Continuidad del Negocio y Gesti\'on de Crisis}{18}{}%
-\contentsline {subsection}{\numberline {5.3}Niveles de Servicio y Soporte Inform\'atico}{20}{}%
-\contentsline {section}{\numberline {6}Conclusiones}{24}{}%
+\contentsline {section}{\numberline {5}Parte IV: Requerimientos Externos}{15}{}%
+\contentsline {subsection}{\numberline {5.1}Requerimientos de Terceras Partes (Proveedores y Socios)}{15}{}%
+\contentsline {subsection}{\numberline {5.2}Continuidad del Negocio y Gesti\'on de Crisis}{17}{}%
+\contentsline {subsection}{\numberline {5.3}Niveles de Servicio y Soporte Inform\'atico}{19}{}%
+\contentsline {section}{\numberline {6}Conclusiones}{23}{}%
