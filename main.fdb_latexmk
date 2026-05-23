@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779245237.40406 "c:/Users/Ignacio/Desktop/DS2/arq-emerg-2026-1/main.tex" "main.pdf" "main" 1779245238.52232 0
+["pdflatex"] 1779494260.21935 "c:/Users/Ignacio/Desktop/DS2/arq-emerg-2026-1/main.tex" "main.pdf" "main" 1779494261.31338 0
   "C:/Users/Ignacio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779245146 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Ignacio/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1200.pk" 1779245149 15080 1323290657d37a6a5152f688174cadd9 ""
   "C:/Users/Ignacio/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1779244981 13334455 75faff299aaa2521ad6e02d7e7d71682 ""
@@ -61,11 +61,11 @@
   "C:/Users/Ignacio/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1761901070 7243 a2c17f18e2c9b702b84fad03d5f9c78b ""
   "C:/Users/Ignacio/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090541124 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/Ignacio/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Ignacio/Desktop/DS2/arq-emerg-2026-1/main.tex" 1779245234 58260 1daf2832947cf48bd08ac1d19aef5fbb ""
+  "c:/Users/Ignacio/Desktop/DS2/arq-emerg-2026-1/main.tex" 1779494259 57862 7e5975f1fe84debc6bbd50e5993b1d5b ""
   "img/unnamed.png" 1779243743 31351 497c3e1dc55ab53d9d475b999428fb4a ""
-  "main.aux" 1779245238 3119 059bd552b349419db47e5f2efe3d5b50 "pdflatex"
-  "main.tex" 1779245234 58260 1daf2832947cf48bd08ac1d19aef5fbb ""
-  "main.toc" 1779245238 1528 5a76db7239774f9b38c8140cad6064f9 "pdflatex"
+  "main.aux" 1779494261 3119 059bd552b349419db47e5f2efe3d5b50 "pdflatex"
+  "main.tex" 1779494259 57862 7e5975f1fe84debc6bbd50e5993b1d5b ""
+  "main.toc" 1779494261 1528 5a76db7239774f9b38c8140cad6064f9 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
